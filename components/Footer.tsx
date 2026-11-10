@@ -82,7 +82,16 @@ export function Footer() {
 
       <div className="border-t border-paper/15">
         <div className="container flex flex-col gap-3 py-6 text-sm text-paper/70 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</p>
+          <div className="space-y-1">
+            <p>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</p>
+            <p>
+              This website was developed by{" "}
+              <ExternalLink href="https://smartscaleagent.com/contact" className="text-paper underline underline-offset-2 hover:text-gold">
+                Smart Scale LLC
+              </ExternalLink>
+              .
+            </p>
+          </div>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             <li><Link href="/privacy-policy" className="hover:text-gold">Privacy</Link></li>
             <li><Link href="/terms" className="hover:text-gold">Terms</Link></li>

@@ -45,8 +45,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <article className="container mt-8">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
           <div className="mx-auto w-full max-w-sm md:sticky md:top-24">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-r-xl rounded-l-md border border-ink/10 shadow-[inset_8px_0_0_rgba(255,255,255,.4),14px_16px_34px_-18px_rgba(26,25,23,.8)]" style={{ background: c.hex }}>
-              {guide.image && <Image src={guide.image} alt={guide.imageAlt} fill sizes="(min-width: 768px) 40vw, 90vw" className="object-cover" priority />}
+            <div className="relative aspect-[3/4] overflow-hidden rounded-r-xl rounded-l-md border border-ink/10 p-4 shadow-[inset_8px_0_0_rgba(255,255,255,.4),14px_16px_34px_-18px_rgba(26,25,23,.8)]" style={{ background: c.hex }}>
+              {guide.image && (
+                <div className="relative h-full w-full overflow-hidden rounded-md bg-white shadow-card">
+                  <Image src={guide.image} alt={guide.imageAlt} fill sizes="(min-width: 768px) 40vw, 90vw" className="object-contain" priority />
+                </div>
+              )}
             </div>
           </div>
 
@@ -69,7 +73,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
             <div className="prose mt-10" dangerouslySetInnerHTML={{ __html: guide.html }} />
 
-            <dl className="mt-10 grid gap-4 rounded-card border border-line bg-white p-6 shadow-card sm:grid-cols-3">
+            <dl className="mt-10 grid gap-6 rounded-card border border-line bg-white p-6 text-center shadow-card sm:grid-cols-3 sm:gap-4">
               <div>
                 <dt className="eyebrow">Format</dt>
                 <dd className="mt-1 font-medium">{guide.pages}</dd>

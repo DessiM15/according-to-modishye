@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Instrument_Sans, DM_Mono } from "next/font/google";
+import { Fraunces, Instrument_Sans, DM_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { Header } from "@/components/Header";
@@ -16,6 +16,7 @@ const fraunces = Fraunces({
 });
 const instrument = Instrument_Sans({ subsets: ["latin"], variable: "--font-instrument", display: "swap" });
 const dmMono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-dm-mono", display: "swap" });
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -49,7 +50,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${instrument.variable} ${dmMono.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${instrument.variable} ${dmMono.variable} ${caveat.variable}`}>
       <head>
         <script
           // Decides before first paint whether the intro card plays, so there is no flash.

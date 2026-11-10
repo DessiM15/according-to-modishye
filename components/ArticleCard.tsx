@@ -3,10 +3,13 @@ import Image from "next/image";
 import type { Post, Shelf } from "@/lib/content";
 import { colours, formatDate } from "@/lib/site";
 
-export function ArticleCard({ post, shelf, priority = false, headingLevel = 3 }: { post: Post; shelf?: Shelf; priority?: boolean; headingLevel?: 2 | 3 }) {
+export function ArticleCard({ post, shelf, priority = false, headingLevel = 3, book = false }: { post: Post; shelf?: Shelf; priority?: boolean; headingLevel?: 2 | 3; book?: boolean }) {
   const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition-shadow hover:shadow-lift">
+    <article
+      className={`group flex h-full flex-col overflow-hidden bg-white transition-shadow ${book ? "book-card" : "rounded-card border border-line shadow-card hover:shadow-lift"}`}
+      style={book && shelf ? { borderLeftColor: colours[shelf.colour].hex } : undefined}
+    >
       <Link href={`/articles/${post.slug}`} className="no-underline" tabIndex={-1} aria-hidden="true">
         <div className="relative aspect-[1.9/1] bg-paper-2">
           {post.cover ? (

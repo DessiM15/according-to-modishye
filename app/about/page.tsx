@@ -5,6 +5,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExternalLink } from "@/components/ExternalLink";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
+import { RoadMap, type RoadStop } from "@/components/RoadMap";
+import { SectionHeader } from "@/components/SectionHeader";
 import { getPost, getShelves } from "@/lib/content";
 import { breadcrumbLd, graph, personLd } from "@/lib/seo";
 import { colours, site } from "@/lib/site";
@@ -28,6 +30,14 @@ export default function AboutPage() {
       text
     );
   };
+
+  const stops: RoadStop[] = [
+    { when: "Nigeria", title: "Boarding school", colour: shelves[0].colour, body: "Small classes, big social rules. Favoritism, bullying and finding her voice.", href: `/library/${shelves[0].slug}` },
+    { when: "July 2013", title: "Houston", colour: shelves[1].colour, body: "Weeks to pick a school. Bellaire High School, starting as a sophomore.", href: `/library/${shelves[1].slug}` },
+    { when: "2015", title: "Graduated at 16", colour: shelves[2].colour, body: "On time, after making up the lost year. Then community college.", href: `/library/${shelves[2].slug}` },
+    { when: "Undergrad", title: "Economics", colour: shelves[3].colour, body: "Private college in Iowa, a professor's advice to invest early, a law internship.", href: `/library/${shelves[3].slug}` },
+    { when: "2019 to now", title: "The blog, the channel, the book", colour: shelves[4].colour, body: "Writing for other only children. The Solo Scholar, published January 2025.", href: `/library/${shelves[4].slug}` },
+  ];
 
   const chapters = [
     {
@@ -83,7 +93,7 @@ export default function AboutPage() {
   ];
 
   const beliefs = [
-    { title: "Favor is a skill", body: "Hard work alone is not the whole story. Learn to recognise favoritism and use it honestly." , slug: "how-to-use-favoritism-to-your-advantage" },
+    { title: "Favor is a skill", body: "Hard work alone is not the whole story. Learn to recognise favoritism and use it honestly.", slug: "how-to-use-favoritism-to-your-advantage" },
     { title: "Change your environment", body: "If the place is wrong, the problem is not always you. Move.", slug: "its-not-you-change-your-environment" },
     { title: "Raise your voice", body: "Gather the facts, then say the thing. Observers do not get heard.", slug: "raise-your-voice" },
   ];
@@ -95,13 +105,13 @@ export default function AboutPage() {
       </div>
 
       <section className="container mt-8 grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr]">
-        <div>
-          <p className="eyebrow">Her story</p>
+        <div className="text-center md:text-left">
+          <p className="hand">Her story</p>
           <h1 className="mt-2 text-3xl font-semibold">Yeyeside Talabi</h1>
-          <p className="mt-5 max-w-[56ch] text-lg text-ink-2">
+          <p className="mx-auto mt-5 max-w-[56ch] text-lg text-ink-2 md:mx-0">
             Writer, YouTuber and author of The Solo Scholar. Nigerian, Namibian and South African. An only child who went from a boarding school in Nigeria to a US economics degree, and wrote down everything the road taught her so you do not have to learn it alone.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
             <Link href="/library" className="btn">
               Open the library
             </Link>
@@ -119,12 +129,16 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section aria-labelledby="road-title" className="container mt-24">
+        <SectionHeader eyebrow="The road so far" id="road-title" title="Five stops, five shelves" intro="The library is organised the way her life was. Follow the road, then read the chapter that matches where you are." />
+        <div className="mt-4">
+          <RoadMap stops={stops} endLabel="Today" />
+        </div>
+      </section>
+
       <section aria-labelledby="chapters-title" className="container mt-24">
-        <h2 id="chapters-title" className="text-2xl font-semibold">
-          Five chapters, five shelves
-        </h2>
-        <p className="mt-2 max-w-2xl text-ink-2">The library is organised the way her life was. Each chapter below is a shelf you can read.</p>
-        <ol className="mt-10 space-y-10">
+        <SectionHeader eyebrow="In full" id="chapters-title" title="The long version" />
+        <ol className="mx-auto mt-12 max-w-4xl space-y-10">
           {chapters.map((c, i) => (
             <li key={i} className="grid gap-4 md:grid-cols-[10rem_1fr] md:gap-10">
               <div>
@@ -145,12 +159,10 @@ export default function AboutPage() {
       </section>
 
       <section aria-labelledby="beliefs-title" className="container mt-24">
-        <h2 id="beliefs-title" className="text-2xl font-semibold">
-          Three things she keeps saying
-        </h2>
-        <ul className="mt-8 grid gap-4 md:grid-cols-3">
+        <SectionHeader eyebrow="On repeat" id="beliefs-title" title="Three things she keeps saying" />
+        <ul className="mt-10 grid gap-4 md:grid-cols-3">
           {beliefs.map((b, i) => (
-            <li key={i} className="catalogue-card p-6">
+            <li key={i} className="catalogue-card p-6 text-center">
               <p className="display text-xl font-semibold">{b.title}</p>
               <p className="mt-2 text-ink-2">{b.body}</p>
               {getPost(b.slug) && (
@@ -164,10 +176,8 @@ export default function AboutPage() {
       </section>
 
       <section aria-labelledby="find-title" className="container mt-24">
-        <h2 id="find-title" className="text-2xl font-semibold">
-          Where to find her
-        </h2>
-        <ul className="mt-6 flex flex-wrap gap-3">
+        <SectionHeader eyebrow="Say hi" id="find-title" title="Where to find her" />
+        <ul className="mt-8 flex flex-wrap justify-center gap-3">
           <li>
             <ExternalLink href={site.social.youtube} className="sticker bg-coral">
               YouTube

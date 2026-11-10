@@ -4,6 +4,7 @@ import { Bookcase } from "@/components/Bookcase";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
+import { SectionHeader } from "@/components/SectionHeader";
 import { getPostsForShelf, getShelves } from "@/lib/content";
 import { breadcrumbLd, graph } from "@/lib/seo";
 import { colours } from "@/lib/site";
@@ -22,17 +23,11 @@ export default function LibraryPage() {
     <>
       <div className="container pt-8">
         <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Library" }]} />
-        <div className="mt-6 max-w-3xl">
-          <p className="eyebrow">
-            {shelves.length} shelves · {total} titles
-          </p>
-          <h1 className="mt-2 text-3xl font-semibold">The Library</h1>
-          <p className="mt-4 text-lg text-ink-2">
-            Read in order and it is her story. Jump to a shelf and it is the help you need this week.
-          </p>
+        <div className="mt-8">
+          <SectionHeader as="h1" eyebrow={`${shelves.length} shelves · ${total} titles`} title="The Library" intro="Read in order and it is her story. Jump to a shelf and it is the help you need this week." />
         </div>
         <nav aria-label="Shelves on this page" className="mt-8">
-          <ul className="flex flex-wrap gap-2">
+          <ul className="flex flex-wrap justify-center gap-2">
             {shelves.map((s) => (
               <li key={s.slug}>
                 <Link href={`#${s.slug}`} className="sticker !text-base !py-2" style={{ background: colours[s.colour].hex, color: colours[s.colour].ink }}>
@@ -44,7 +39,7 @@ export default function LibraryPage() {
         </nav>
       </div>
 
-      <div className="container mt-16 space-y-24">
+      <div className="container mt-20 space-y-28">
         {shelves.map((s) => (
           <Bookcase key={s.slug} shelf={s} posts={getPostsForShelf(s.slug)} />
         ))}

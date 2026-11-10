@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
-import { LibraryShelf, type ShelfSummary } from "@/components/LibraryShelf";
+import { Shelf, type ShelfSummary } from "@/components/Shelf";
 import { GuideCard } from "@/components/GuideCard";
 import { BookCover } from "@/components/BookCover";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { Newsletter } from "@/components/Newsletter";
 import { ExternalLink } from "@/components/ExternalLink";
 import { ArticleCard } from "@/components/ArticleCard";
+import { RoadMap, type RoadStop } from "@/components/RoadMap";
+import { SectionHeader } from "@/components/SectionHeader";
 import { getGuides, getGuidesForShelf, getLatestPosts, getPostsForShelf, getShelf, getShelves } from "@/lib/content";
 import { colours, site } from "@/lib/site";
 
@@ -14,14 +16,6 @@ const doors = [
   { title: "Applying this year", body: "Six steps from senior year to a freshman dorm, and how to ask a professor for a recommendation that lands.", href: "/library/getting-into-college", colour: "gold" as const, label: "Shelf 02" },
   { title: "First year, far from home", body: "Homesickness, roommates, deadlines, and the three apps that got her through.", href: "/library/surviving-college", colour: "lavender" as const, label: "Shelf 03" },
   { title: "Parent of an only child", body: "The book was written for your kid. Start with why she wrote it.", href: "/the-solo-scholar", colour: "magenta" as const, label: "The book" },
-];
-
-const stops = [
-  { when: "Nigeria", what: "Boarding school. Classes of ten to fifteen. The first lessons in resilience, favoritism and speaking up." },
-  { when: "July 2013", what: "Lands in Houston with a few weeks to choose a school. Enrols at Bellaire High School as a sophomore." },
-  { when: "2015", what: "Graduates at sixteen, on time, after making up a lost year." },
-  { when: "Undergrad", what: "Community college, then private college, studying economics. A law internship in the last semester." },
-  { when: "2019 to now", what: "Starts the blog and the YouTube channel. Writes The Solo Scholar, published January 2025." },
 ];
 
 export default function HomePage() {
@@ -38,6 +32,14 @@ export default function HomePage() {
   }));
   const guides = getGuides();
   const latest = getLatestPosts(3);
+
+  const stops: RoadStop[] = [
+    { when: "Nigeria", colour: shelves[0].colour, body: "Boarding school. Classes of ten to fifteen. The first lessons in resilience, favoritism and speaking up." },
+    { when: "July 2013", colour: shelves[1].colour, body: "Lands in Houston with a few weeks to choose a school. Enrols at Bellaire High School as a sophomore." },
+    { when: "2015", colour: shelves[2].colour, body: "Graduates at sixteen, on time, after making up a lost year." },
+    { when: "Undergrad", colour: shelves[3].colour, body: "Community college, then private college, studying economics. A law internship in the last semester." },
+    { when: "2019 to now", colour: shelves[4].colour, body: "Starts the blog and the YouTube channel. Writes The Solo Scholar, published January 2025." },
+  ];
 
   return (
     <>
@@ -61,34 +63,48 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="library-title" className="container mt-24">
-        <div className="max-w-2xl">
-          <p className="eyebrow">The library</p>
-          <h2 id="library-title" className="mt-2 text-3xl font-semibold">
-            Pull a book off the shelf.
-          </h2>
-          <p className="mt-4 text-lg text-ink-2">
-            Five shelves, one for each chapter of the road from boarding school to graduate school. Pick the chapter you are living and the articles for it appear underneath.
-          </p>
+        <SectionHeader
+          eyebrow="The library"
+          id="library-title"
+          title="Pull a book off the shelf."
+          intro="Five shelves, one for each chapter of the road from boarding school to graduate school. Pick the chapter you are living and the articles for it appear underneath."
+        />
+        <div className="mt-12">
+          <Shelf shelves={summaries} />
         </div>
-        <div className="mt-10">
-          <LibraryShelf shelves={summaries} />
+      </section>
+
+      <section aria-labelledby="story-title" className="container mt-24">
+        <SectionHeader
+          eyebrow="Her story"
+          id="story-title"
+          title="Three passports. One road to college."
+          intro="Nigerian, Namibian and South African. An only child. She did the transition this site is about, and she wrote it all down."
+          action={
+            <Link href="/about" className="btn">
+              Read her story
+            </Link>
+          }
+        />
+        <div className="mt-6">
+          <RoadMap stops={stops} />
         </div>
       </section>
 
       <section aria-labelledby="book-title" className="mt-24 bg-ink py-16 text-paper on-dark sm:py-24">
-        <div className="container grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
-          <div className="mx-auto w-[min(70vw,18rem)] text-[clamp(1rem,0.6rem+2vw,1.5rem)] md:w-full md:max-w-xs">
+        <div className="container grid items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
+          <div className="mx-auto w-[min(62vw,16rem)] md:w-full md:max-w-[17rem]">
             <BookCover />
           </div>
-          <div>
-            <p className="eyebrow !text-paper/60">The book · Paperback and Kindle</p>
+          <div className="text-center md:text-left">
+            <p className="hand !text-gold">The book · Paperback and Kindle</p>
             <h2 id="book-title" className="mt-2 text-3xl font-semibold">
               {site.book.title}: {site.book.subtitle}
             </h2>
-            <p className="mt-5 max-w-[56ch] text-lg text-paper/85">
+            <p className="mx-auto mt-5 max-w-[56ch] text-lg text-paper/85 md:mx-0">
               Year by year, freshman to senior, for the student with no older sibling to ask. Homesickness, roommates, professors, and how each year sets up the next. Written across 2024 from her own road through community college and private college.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
               <ExternalLink href={site.book.amazon} className="btn btn-gold">
                 Buy on Amazon
               </ExternalLink>
@@ -100,45 +116,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="story-title" className="container mt-24">
-        <div className="grid gap-10 md:grid-cols-[1fr_1.6fr]">
-          <div>
-            <p className="eyebrow">Her story</p>
-            <h2 id="story-title" className="mt-2 text-3xl font-semibold">
-              Three passports. One road to college.
-            </h2>
-            <p className="mt-4 text-lg text-ink-2">
-              Nigerian, Namibian and South African. An only child. She did the transition this site is about, and she wrote it all down.
-            </p>
-            <Link href="/about" className="btn mt-6">
-              Read her story
-            </Link>
-          </div>
-          <ol className="relative border-l-2 border-ink pl-6">
-            {stops.map((s, i) => (
-              <li key={i} className="relative pb-8 last:pb-0">
-                <span className="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-2 border-ink" style={{ background: colours[shelves[i].colour].hex }} aria-hidden="true" />
-                <p className="font-mono text-xs tracking-[0.16em] uppercase text-ink-3">{s.when}</p>
-                <p className="mt-1 text-ink">{s.what}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section aria-labelledby="guides-title" className="container mt-24">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div className="max-w-xl">
-            <p className="eyebrow">Guides · PDF downloads</p>
-            <h2 id="guides-title" className="mt-2 text-3xl font-semibold">
-              The checklists she wishes someone had handed her.
-            </h2>
-          </div>
-          <Link href="/guides" className="btn btn-ghost">
-            All guides
-          </Link>
-        </div>
-        <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <SectionHeader
+          eyebrow="Guides · PDF downloads"
+          id="guides-title"
+          title="The checklists she wishes someone had handed her."
+          action={
+            <Link href="/guides" className="btn btn-ghost">
+              All guides
+            </Link>
+          }
+        />
+        <ul className="mt-12 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
           {guides.map((g) => (
             <li key={g.slug}>
               <GuideCard guide={g} />
@@ -148,18 +137,17 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="latest-title" className="container mt-24">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="eyebrow">New on the shelves</p>
-            <h2 id="latest-title" className="mt-2 text-3xl font-semibold">
-              Latest articles
-            </h2>
-          </div>
-          <Link href="/library" className="btn btn-ghost">
-            Open the library
-          </Link>
-        </div>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <SectionHeader
+          eyebrow="New on the shelves"
+          id="latest-title"
+          title="Latest articles"
+          action={
+            <Link href="/library" className="btn btn-ghost">
+              Open the library
+            </Link>
+          }
+        />
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {latest.map((p) => (
             <li key={p.slug}>
               <ArticleCard post={p} shelf={getShelf(p.shelf)} />
@@ -169,19 +157,18 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="video-title" className="container mt-24">
-        <div className="grid items-center gap-10 md:grid-cols-[1fr_1.5fr]">
-          <div>
-            <p className="eyebrow">On YouTube</p>
-            <h2 id="video-title" className="mt-2 text-3xl font-semibold">
-              The same story, told out loud.
-            </h2>
-            <p className="mt-4 text-lg text-ink-2">
-              How she made up a lost year and graduated high school at sixteen. The channel covers boarding school, high school, community college and university.
-            </p>
-            <ExternalLink href={site.social.youtube} className="btn mt-6">
+        <SectionHeader
+          eyebrow="On YouTube"
+          id="video-title"
+          title="The same story, told out loud."
+          intro="How she made up a lost year and graduated high school at sixteen. The channel covers boarding school, high school, community college and university."
+          action={
+            <ExternalLink href={site.social.youtube} className="btn">
               Subscribe on YouTube
             </ExternalLink>
-          </div>
+          }
+        />
+        <div className="mx-auto mt-10 max-w-3xl">
           <YouTubeEmbed id="FdWgk05oDfQ" title="How I graduated high school at 16 after moving back to the US" />
         </div>
       </section>

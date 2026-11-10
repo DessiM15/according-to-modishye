@@ -6,16 +6,20 @@ import { colours } from "@/lib/site";
 export function GuideCard({ guide }: { guide: Guide }) {
   const c = colours[guide.colour];
   return (
-    <article className="group flex h-full flex-col">
+    <article className="group flex h-full flex-col text-center">
       <Link href={`/guides/${guide.slug}`} className="no-underline" aria-hidden="true" tabIndex={-1}>
         <div
-          className="relative aspect-[3/4] overflow-hidden rounded-r-lg rounded-l-sm border border-ink/10 shadow-[inset_6px_0_0_rgba(255,255,255,.4),8px_10px_24px_-14px_rgba(26,25,23,.7)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[-1.5deg]"
+          className="relative aspect-[3/4] overflow-hidden rounded-r-lg rounded-l-sm border border-ink/10 p-3 shadow-[inset_6px_0_0_rgba(255,255,255,.4),8px_10px_24px_-14px_rgba(26,25,23,.7)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[-1.5deg]"
           style={{ background: c.hex }}
         >
-          {guide.image && <Image src={guide.image} alt="" fill sizes="(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 60vw" className="object-cover" />}
+          {guide.image && (
+            <div className="relative h-full w-full overflow-hidden rounded-md bg-white shadow-card">
+              <Image src={guide.image} alt="" fill sizes="(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 60vw" className="object-contain" />
+            </div>
+          )}
         </div>
       </Link>
-      <div className="mt-4 flex flex-1 flex-col">
+      <div className="mt-4 flex flex-1 flex-col items-center">
         <h3 className="text-lg font-semibold leading-tight">
           <Link href={`/guides/${guide.slug}`} className="text-ink no-underline group-hover:underline decoration-2 underline-offset-4">
             {guide.title}

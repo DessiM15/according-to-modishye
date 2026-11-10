@@ -15,9 +15,11 @@ export type ShelfSummary = {
   guides: { slug: string; title: string; price: number }[];
 };
 
-// Her sketch: five books on a shelf, one per topic. Pull a book and the articles
-// for that topic appear underneath. Built as tabs so it works with a keyboard and a screen reader.
-export function LibraryShelf({ shelves, initial = "getting-into-college" }: { shelves: ShelfSummary[]; initial?: string }) {
+const heights = ["92%", "100%", "95%", "88%", "97%"];
+
+// Her sketch: five books on a wooden shelf, one per topic. Pull a book and its articles appear underneath.
+// Built as tabs so it works with a keyboard and a screen reader.
+export function Shelf({ shelves, initial = "getting-into-college" }: { shelves: ShelfSummary[]; initial?: string }) {
   const [active, setActive] = useState(() => shelves.find((s) => s.slug === initial)?.slug ?? shelves[0].slug);
   const id = useId();
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -38,46 +40,45 @@ export function LibraryShelf({ shelves, initial = "getting-into-college" }: { sh
 
   return (
     <div>
-      <div className="relative rounded-t-2xl bg-paper-2 px-3 pt-10 sm:px-6 sm:pt-14">
-        <div role="tablist" aria-label="Library shelves" className="flex items-end justify-center gap-2 sm:gap-4">
-          {shelves.map((shelf, i) => {
-            const selected = shelf.slug === active;
-            const c = colours[shelf.colour];
-            const heights = ["h-56 sm:h-72", "h-64 sm:h-80", "h-60 sm:h-76", "h-52 sm:h-68", "h-62 sm:h-78"];
-            return (
-              <button
-                key={shelf.slug}
-                ref={(el) => {
-                  tabRefs.current[i] = el;
-                }}
-                role="tab"
-                id={`${id}-tab-${shelf.slug}`}
-                aria-selected={selected}
-                aria-controls={`${id}-panel`}
-                tabIndex={selected ? 0 : -1}
-                onClick={() => setActive(shelf.slug)}
-                onKeyDown={(e) => onKeyDown(e, i)}
-                className={`spine ${heights[i % heights.length]} w-[18%] max-w-[88px] min-w-[52px] text-[clamp(0.8rem,0.6rem+0.9vw,1.15rem)] cursor-pointer`}
-                style={{ background: c.hex, color: c.ink }}
-              >
-                <span className="font-mono text-[0.62em] font-normal tracking-[0.18em] mr-[0.35em]">{String(i + 1).padStart(2, "0")}</span>
-                <span>{shelf.title}</span>
-              </button>
-            );
-          })}
+      <div className="bookcase">
+        <div className="bookcase-back overflow-x-auto px-4 pt-12 sm:px-8">
+          <div role="tablist" aria-label="Library shelves" className="mx-auto flex h-[17rem] w-max min-w-full items-end justify-center gap-2 sm:gap-3 md:h-[20rem]">
+            {shelves.map((shelf, i) => {
+              const selected = shelf.slug === active;
+              const c = colours[shelf.colour];
+              return (
+                <button
+                  key={shelf.slug}
+                  ref={(el) => {
+                    tabRefs.current[i] = el;
+                  }}
+                  role="tab"
+                  id={`${id}-tab-${shelf.slug}`}
+                  aria-selected={selected}
+                  aria-controls={`${id}-panel`}
+                  tabIndex={selected ? 0 : -1}
+                  onClick={() => setActive(shelf.slug)}
+                  onKeyDown={(e) => onKeyDown(e, i)}
+                  className="tome w-[7.6rem] sm:w-[8.6rem] md:w-[10.5rem]"
+                  style={{ background: c.hex, color: c.ink, height: heights[i] }}
+                >
+                  <span className="tome-spine-text">Modishye · Shelf {String(i + 1).padStart(2, "0")}</span>
+                  <span className="tome-label">
+                    <span className="hand block !text-[1rem] leading-none sm:!text-[1.3rem]">{shelf.chapter}</span>
+                    <span className="display mt-1 block text-[0.95rem] font-semibold leading-[1.1] sm:text-[1.15rem]">{shelf.title}</span>
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
-        <div className="shelf-plank mt-0 -mx-3 sm:-mx-6" aria-hidden="true" />
+        <div className="plank -mx-[14px]" aria-hidden="true" />
       </div>
 
-      <div
-        role="tabpanel"
-        id={`${id}-panel`}
-        aria-labelledby={`${id}-tab-${current.slug}`}
-        className="catalogue-card mt-6 p-5 sm:p-8"
-      >
+      <div role="tabpanel" id={`${id}-panel`} aria-labelledby={`${id}-tab-${current.slug}`} className="catalogue-card mt-8 p-5 sm:p-8">
         <div className="grid gap-8 md:grid-cols-[1fr_1.4fr]">
           <div>
-            <p className="eyebrow">
+            <p className="hand">
               {current.chapter} · {current.posts.length} {current.posts.length === 1 ? "article" : "articles"}
             </p>
             <h3 className="mt-2 text-2xl font-semibold">{current.title}</h3>
@@ -107,9 +108,9 @@ export function LibraryShelf({ shelves, initial = "getting-into-college" }: { sh
               {current.posts.map((p, i) => (
                 <li key={p.slug}>
                   <Link href={`/articles/${p.slug}`} className="group flex items-baseline gap-4 py-3 no-underline">
-                    <span className="font-mono text-xs text-ink-3 w-6 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="hand w-7 shrink-0 text-[1.2rem]">{String(i + 1).padStart(2, "0")}</span>
                     <span className="display flex-1 text-lg leading-tight text-ink group-hover:text-coral-deep group-hover:underline">{p.title}</span>
-                    <span className="hidden sm:inline font-mono text-xs text-ink-3 whitespace-nowrap">
+                    <span className="hidden whitespace-nowrap font-mono text-xs text-ink-3 sm:inline">
                       {p.video ? "video · " : ""}
                       {p.readingMinutes} min
                     </span>

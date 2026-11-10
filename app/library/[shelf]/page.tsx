@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
+import { SectionHeader } from "@/components/SectionHeader";
 import { getGuidesForShelf, getPostsForShelf, getShelf, getShelves } from "@/lib/content";
 import { breadcrumbLd, collectionLd, graph } from "@/lib/seo";
 import { colours } from "@/lib/site";
@@ -40,19 +41,17 @@ export default async function ShelfPage({ params }: { params: Promise<{ shelf: s
     <>
       <div className="container pt-8">
         <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Library", href: "/library" }, { name: shelf.title }]} />
-        <div className="mt-6 grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-end">
-          <div>
-            <p className="eyebrow">
-              {shelf.chapter} · {posts.length} {posts.length === 1 ? "title" : "titles"}
-            </p>
-            <h1 className="mt-2 text-3xl font-semibold">
-              <span className="inline-block border-b-[6px]" style={{ borderColor: colours[shelf.colour].hex }}>
-                {shelf.title}
-              </span>
-            </h1>
-            <p className="mt-4 text-lg text-ink-2">{shelf.description}</p>
-          </div>
-          <div className="flex flex-wrap gap-2 md:justify-end">
+        <div className="mx-auto mt-8 max-w-2xl text-center">
+          <p className="hand">
+            {shelf.chapter} · {posts.length} {posts.length === 1 ? "title" : "titles"}
+          </p>
+          <h1 className="mt-2 text-3xl font-semibold">
+            <span className="inline-block border-b-[6px]" style={{ borderColor: colours[shelf.colour].hex }}>
+              {shelf.title}
+            </span>
+          </h1>
+          <p className="mt-4 text-lg text-ink-2">{shelf.description}</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-2">
             {prev && (
               <Link href={`/library/${prev.slug}`} className="btn btn-ghost">
                 Previous: {prev.title}
@@ -72,12 +71,9 @@ export default async function ShelfPage({ params }: { params: Promise<{ shelf: s
       </div>
 
       {guides.length > 0 && (
-        <section aria-labelledby="shelf-guides" className="container mt-20">
-          <p className="eyebrow">Guides for this chapter</p>
-          <h2 id="shelf-guides" className="mt-2 text-2xl font-semibold">
-            Take the checklist with you
-          </h2>
-          <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+        <section aria-labelledby="shelf-guides" className="container mt-24">
+          <SectionHeader eyebrow="Guides for this chapter" id="shelf-guides" title="Take the checklist with you" />
+          <ul className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
             {guides.map((g) => (
               <li key={g.slug}>
                 <GuideCard guide={g} />
