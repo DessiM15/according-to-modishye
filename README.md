@@ -43,15 +43,19 @@ Copy `.env.example` to `.env.local`. Without a key, each feature works in previe
 
 ## Launch checklist
 
-1. Sanity: in `studio/`, run `npx sanity login` then `npx sanity init --env` to create the project (free plan, dataset `production`). Put the project id in `studio/.env.development` and in the site's `.env.local` / Vercel. Run `npx sanity deploy` and choose the studio hostname.
-2. Re-run `scripts/import-wp.mjs` against the live site so the latest posts carry over, then `npm run migrate:sanity` once. From then on the portal is the source of truth.
-3. Tokens and webhook: Viewer token for `SANITY_API_READ_TOKEN`, Editor token for the one-off migration, webhook on `/api/revalidate` with `SANITY_REVALIDATE_SECRET`. Invite her email to the project as Editor.
-4. Shopify Starter: create the six products, upload the PDFs, paste each handle into the guide in the portal (Shop tab).
-5. Mailchimp and Resend keys.
-6. Vercel Pro (commercial use). Point DNS. Keep her existing email: move the MX records with the domain.
+Done on 10 Nov 2026: Sanity project `uvpgl52r` (dataset `production`), studio deployed at https://modishye.sanity.studio, all 35 documents and 44 images migrated, publish webhook live, Sanity env vars set on both Vercel projects for production and preview. Publish, edit and delete reach the live site within about ten seconds. Preview on site verified end to end.
+
+1. Invite her email to the Sanity project as Editor (sanity.io/manage > project > Members). Walk her through `docs/how-to-publish.md` on a call and record it.
+2. Shopify Starter: create the six products, upload the PDFs, paste each handle into the guide in the portal (Shop tab). Set `NEXT_PUBLIC_SHOPIFY_DOMAIN`.
+3. Mailchimp and Resend keys.
+4. Vercel Pro (commercial use). Point DNS. Keep her existing email: move the MX records with the domain.
+5. At cutover, three URL changes: the webhook URL in sanity.io/manage > API > Webhooks to `https://www.accordingtomodishyeblog.com/api/revalidate`; `SANITY_STUDIO_SITE_URL` in `studio/.env.production` then `npx sanity deploy`; `NEXT_PUBLIC_SITE_URL` on Vercel.
+6. Before cutover, re-run `scripts/import-wp.mjs` against the live site and check for posts she published after 10 Nov 2026. Add any new ones through the portal rather than re-running the migration, which would overwrite her portal edits.
 7. Google Search Console: verify the new site, submit `/sitemap.xml`. The 97 redirects in `content/redirects.json` carry the old URLs over.
 8. Replace `public/images/solo-scholar-cover.png` with the real cover art when she sends it.
-9. Walk her through `docs/how-to-publish.md` on a call and record it.
+9. Delete the Editor token "Migration (editor)" in sanity.io/manage once the content is final.
+
+Notes from setup: the site reads Sanity with `useCdn: false` and the webhook calls `revalidateTag(tag, { expire: 0 })` plus `revalidatePath("/", "layout")`. With the CDN on or with the `"max"` profile, pages rebuilt from stale data and a deleted article kept serving. Vercel preview env vars had to be added through the REST API; the CLI kept asking for a branch.
 
 ## Accessibility and SEO baseline
 
