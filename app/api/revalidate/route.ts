@@ -26,8 +26,9 @@ export async function POST(req: Request) {
     payload = JSON.parse(body);
   } catch {}
 
-  // Data: every page reads one tagged query, so one tag covers the lot.
-  revalidateTag(CONTENT_TAG, "max");
+  // Data: every page reads one tagged query, so one tag covers the lot. expire: 0 means immediate expiry,
+  // not stale-while-revalidate, so the next render fetches fresh content instead of baking the old data in.
+  revalidateTag(CONTENT_TAG, { expire: 0 });
   // Pages: expire everything so listings, the sitemap and the changed page all rebuild on the next visit.
   // The site is a few dozen pages, so this is cheap, and it also removes a deleted article's page.
   revalidatePath("/", "layout");
