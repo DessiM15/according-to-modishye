@@ -1,5 +1,8 @@
 import type { StructureResolver } from "sanity/structure";
-import { BookIcon, DocumentIcon, DocumentTextIcon, StackCompactIcon } from "@sanity/icons";
+import { BookIcon } from "@sanity/icons/Book";
+import { DocumentIcon } from "@sanity/icons/Document";
+import { DocumentTextIcon } from "@sanity/icons/DocumentText";
+import { StackCompactIcon } from "@sanity/icons/StackCompact";
 import { shelves } from "./shelves";
 
 // What she sees in the left column. Nothing else.

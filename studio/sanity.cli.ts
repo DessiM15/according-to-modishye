@@ -5,6 +5,7 @@ export default defineCliConfig({
     projectId: process.env.SANITY_STUDIO_PROJECT_ID,
     dataset: process.env.SANITY_STUDIO_DATASET ?? "production",
   },
-  // Hosted at <studioHost>.sanity.studio. Pick the name once with `npx sanity deploy`.
-  deployment: { autoUpdates: true },
+  // Hosted at https://modishye.sanity.studio
+  studioHost: "modishye",
+  deployment: { appId: "wg1gz9op2er1xgh8cnk7dtpc", autoUpdates: true },
 });

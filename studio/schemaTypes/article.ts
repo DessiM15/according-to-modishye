@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-import { DocumentTextIcon } from "@sanity/icons";
+import { DocumentTextIcon } from "@sanity/icons/DocumentText";
 import { shelves } from "../shelves";
 
 export const article = defineType({

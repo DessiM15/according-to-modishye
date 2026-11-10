@@ -1,6 +1,6 @@
 import type { DocumentActionComponent } from "sanity";
 import { useClient } from "sanity";
-import { EyeOpenIcon } from "@sanity/icons";
+import { EyeOpenIcon } from "@sanity/icons/EyeOpen";
 import { createPreviewSecret } from "@sanity/preview-url-secret/create-secret";
 
 const siteUrl = process.env.SANITY_STUDIO_SITE_URL ?? "http://localhost:3000";
