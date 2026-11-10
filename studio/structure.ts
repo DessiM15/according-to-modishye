@@ -11,10 +11,12 @@ export const structure: StructureResolver = (S) =>
     .title("Modishye")
     .items([
       S.listItem()
+        .id("articles")
         .title("Articles")
         .icon(DocumentTextIcon)
         .child(S.documentTypeList("article").title("Articles").defaultOrdering([{ field: "publishedAt", direction: "desc" }])),
       S.listItem()
+        .id("by-shelf")
         .title("Articles by shelf")
         .icon(StackCompactIcon)
         .child(
@@ -36,6 +38,6 @@ export const structure: StructureResolver = (S) =>
             )
         ),
       S.divider(),
-      S.listItem().title("Guides (shop)").icon(BookIcon).child(S.documentTypeList("guide").title("Guides").defaultOrdering([{ field: "order", direction: "asc" }])),
-      S.listItem().title("Legal pages").icon(DocumentIcon).child(S.documentTypeList("legalPage").title("Legal pages")),
+      S.listItem().id("guides").title("Guides (shop)").icon(BookIcon).child(S.documentTypeList("guide").title("Guides").defaultOrdering([{ field: "order", direction: "asc" }])),
+      S.listItem().id("legal").title("Legal pages").icon(DocumentIcon).child(S.documentTypeList("legalPage").title("Legal pages")),
     ]);

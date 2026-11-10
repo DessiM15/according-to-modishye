@@ -2,9 +2,11 @@
 
 Your portal: https://www.accordingtomodishyeblog.com/studio (or the old /wp-admin address, both go to the same place). Log in with your Google account. It works on a laptop or a phone.
 
+The portal opens on your Start page: two big buttons, your recent articles, and the four steps below.
+
 ## Write a new article
 
-1. Click **Articles** on the left, then the **+** at the top.
+1. Click **Write a new article** on the Start page. (Or **Content** at the top, then **Articles**, then the **+**.)
 2. The post opens already laid out: an intro heading, three sections and a closing section. Replace the placeholder text with yours. Delete a section you do not need, or copy one to add more.
 3. Fill in the four boxes above the text:
    - **Title**. Say what the reader gets. Under 70 characters shows in full on Google.
@@ -26,7 +28,7 @@ Do not change the **Web address** of a post that is already published. Links peo
 
 ## Edit a published article
 
-Open it from **Articles**, change what you want, click **Publish** again. Use **Preview on site** first if you want to check it.
+Click **Edit** next to it on the Start page, or open it from **Content > Articles**, change what you want, click **Publish** again. Use **Preview on site** first if you want to check it.
 
 ## Take an article down
 

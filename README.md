@@ -33,7 +33,7 @@ Copy `.env.example` to `.env.local`. Without a key, each feature works in previe
 | Feature | Env vars | Where she gets them |
 |---|---|---|
 | Newsletter (Mailchimp, double opt-in, tagged by stage) | `MAILCHIMP_API_KEY`, `MAILCHIMP_SERVER_PREFIX`, `MAILCHIMP_AUDIENCE_ID` | Mailchimp > Account > Extras > API keys. Audience ID under Audience > Settings |
-| Contact form delivery (Resend) | `RESEND_API_KEY`, `CONTACT_TO` | resend.com, free tier, verify her domain |
+| Contact form delivery (Web3Forms) | `WEB3FORMS_ACCESS_KEY` | web3forms.com, key registered to support@accordingtomodishyeblog.com. Speaking requests arrive with the subject "Speaking request: <school>" |
 | Guide checkout (Shopify Starter, 5 USD a month) | `NEXT_PUBLIC_SHOPIFY_DOMAIN`, plus `shopifyHandle` per guide in `content/guides.json` | Shopify admin after she creates the six products with the Digital Downloads app |
 | Canonical URL | `NEXT_PUBLIC_SITE_URL` | Defaults to the current domain |
 | Portal content (Sanity) | `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET` | sanity.io/manage after `npx sanity init` in `studio/` |
@@ -47,7 +47,7 @@ Done on 10 Nov 2026: Sanity project `uvpgl52r` (dataset `production`), studio de
 
 1. Invite her email to the Sanity project as Editor (sanity.io/manage > project > Members). Walk her through `docs/how-to-publish.md` on a call and record it.
 2. Shopify Starter: create the six products, upload the PDFs, paste each handle into the guide in the portal (Shop tab). Set `NEXT_PUBLIC_SHOPIFY_DOMAIN`.
-3. Mailchimp and Resend keys.
+3. Mailchimp keys.
 4. Vercel Pro (commercial use). Point DNS. Keep her existing email: move the MX records with the domain.
 5. At cutover, three URL changes: the webhook URL in sanity.io/manage > API > Webhooks to `https://www.accordingtomodishyeblog.com/api/revalidate`; `SANITY_STUDIO_SITE_URL` in `studio/.env.production` then `npx sanity deploy`; `NEXT_PUBLIC_SITE_URL` on Vercel.
 6. Before cutover, re-run `scripts/import-wp.mjs` against the live site and check for posts she published after 10 Nov 2026. Add any new ones through the portal rather than re-running the migration, which would overwrite her portal edits.

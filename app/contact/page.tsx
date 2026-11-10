@@ -8,11 +8,12 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Yeyeside Talabi",
-  description: "Questions about college applications, a guide, the book, or a topic you want covered. Email Yeye or use the form. Replies within a few days.",
+  description: "Questions about college applications, a guide, the book, or a topic you want covered. Schools can ask about booking Yeyeside to speak. Replies within a few days.",
   alternates: { canonical: "/contact" },
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ topic?: string }> }) {
+  const { topic } = await searchParams;
   return (
     <>
       <div className="container pt-8">
@@ -50,12 +51,14 @@ export default function ContactPage() {
             </div>
             <div>
               <dt className="eyebrow">Speaking</dt>
-              <dd className="mt-1 text-ink-2">Schools and student groups can ask about talks on the high school to college transition. Use the form and put &quot;Speaking&quot; in the subject.</dd>
+              <dd className="mt-1 text-ink-2">
+                Yeyeside is available to speak at schools and to student and parent groups about getting into college, the first year away from home, and college as an only child. Choose &quot;Speaking request&quot; in the form and she will be in touch.
+              </dd>
             </div>
           </dl>
         </div>
         <div className="catalogue-card relative p-6 sm:p-8">
-          <ContactForm />
+          <ContactForm initialTopic={topic} />
         </div>
       </section>
       <JsonLd data={graph(breadcrumbLd([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]))} />
