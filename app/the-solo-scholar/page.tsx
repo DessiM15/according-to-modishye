@@ -34,9 +34,9 @@ const pages: BookPage[] = [
   { label: "Year four", title: "Senior: the exit plan", body: "Turning four years into what comes next. Internships, applications, and leaving college with more than a degree." },
 ];
 
-export default function BookPage() {
-  const why = getPost("the-solo-scholar-only-children-in-college");
-  const freshman = getPost("only-child-in-college");
+export default async function BookPage() {
+  const why = await getPost("the-solo-scholar-only-children-in-college");
+  const freshman = await getPost("only-child-in-college");
   return (
     <>
       <div className="container pt-8">

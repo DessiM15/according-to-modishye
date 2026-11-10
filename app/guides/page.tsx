@@ -23,8 +23,8 @@ const steps = [
   { title: "Download instantly", body: "The PDF lands in your email the moment the order goes through. Print it or keep it on your phone." },
 ];
 
-export default function GuidesPage() {
-  const guides = getGuides();
+export default async function GuidesPage() {
+  const guides = await getGuides();
   const shelves = getShelves();
   return (
     <>

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { draftMode } from "next/headers";
 import { Fraunces, Instrument_Sans, DM_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
@@ -49,7 +50,8 @@ export const viewport: Viewport = {
   themeColor: "#fbf7ee",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const { isEnabled: preview } = await draftMode();
   return (
     <html lang="en" className={`${fraunces.variable} ${instrument.variable} ${dmMono.variable} ${caveat.variable}`}>
       <head>
@@ -71,6 +73,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        {preview && (
+          <div className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded-full border-2 border-ink bg-gold px-4 py-2 font-mono text-xs shadow-[3px_3px_0_#1a1917]" role="status">
+            Preview: showing unpublished changes.{" "}
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- route handler; a full navigation is needed so the cookie change applies */}
+            <a href="/api/draft/disable" className="underline">
+              Exit preview
+            </a>
+          </div>
+        )}
         <JsonLd data={graph(organizationLd(), personLd(), websiteLd())} />
       </body>
     </html>

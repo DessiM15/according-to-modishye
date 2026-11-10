@@ -9,7 +9,7 @@ import { ExternalLink } from "@/components/ExternalLink";
 import { ArticleCard } from "@/components/ArticleCard";
 import { RoadMap, type RoadStop } from "@/components/RoadMap";
 import { SectionHeader } from "@/components/SectionHeader";
-import { getGuides, getGuidesForShelf, getLatestPosts, getPostsForShelf, getShelf, getShelves } from "@/lib/content";
+import { getGuides, getPosts, getShelf, getShelves } from "@/lib/content";
 import { colours, site } from "@/lib/site";
 
 const doors = [
@@ -18,8 +18,9 @@ const doors = [
   { title: "Parent of an only child", body: "The book was written for your kid. Start with why she wrote it.", href: "/the-solo-scholar", colour: "magenta" as const, label: "The book" },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
   const shelves = getShelves();
+  const [posts, guides] = await Promise.all([getPosts(), getGuides()]);
   const summaries: ShelfSummary[] = shelves.map((s) => ({
     slug: s.slug,
     title: s.title,
@@ -27,11 +28,10 @@ export default function HomePage() {
     colour: s.colour,
     tagline: s.tagline,
     description: s.description,
-    posts: getPostsForShelf(s.slug).map((p) => ({ slug: p.slug, title: p.title, readingMinutes: p.readingMinutes, video: Boolean(p.video) })),
-    guides: getGuidesForShelf(s.slug).map((g) => ({ slug: g.slug, title: g.title, price: g.price })),
+    posts: posts.filter((p) => p.shelf === s.slug).map((p) => ({ slug: p.slug, title: p.title, readingMinutes: p.readingMinutes, video: Boolean(p.video) })),
+    guides: guides.filter((g) => g.shelf === s.slug).map((g) => ({ slug: g.slug, title: g.title, price: g.price })),
   }));
-  const guides = getGuides();
-  const latest = getLatestPosts(3);
+  const latest = posts.slice(0, 3);
 
   const stops: RoadStop[] = [
     { when: "Nigeria", colour: shelves[0].colour, body: "Boarding school. Classes of ten to fifteen. The first lessons in resilience, favoritism and speaking up." },

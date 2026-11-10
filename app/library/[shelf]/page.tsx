@@ -30,8 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ shelf: st
 export default async function ShelfPage({ params }: { params: Promise<{ shelf: string }> }) {
   const shelf = getShelf((await params).shelf);
   if (!shelf) notFound();
-  const posts = getPostsForShelf(shelf.slug);
-  const guides = getGuidesForShelf(shelf.slug);
+  const [posts, guides] = await Promise.all([getPostsForShelf(shelf.slug), getGuidesForShelf(shelf.slug)]);
   const shelves = getShelves();
   const index = shelves.findIndex((s) => s.slug === shelf.slug);
   const prev = shelves[index - 1];

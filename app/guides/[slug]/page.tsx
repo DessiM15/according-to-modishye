@@ -11,14 +11,14 @@ import { getGuide, getGuides, getPostsForShelf, getShelf } from "@/lib/content";
 import { breadcrumbLd, graph, productLd } from "@/lib/seo";
 import { colours } from "@/lib/site";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return getGuides().map((g) => ({ slug: g.slug }));
+export async function generateStaticParams() {
+  return (await getGuides()).map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const guide = getGuide((await params).slug);
+  const guide = await getGuide((await params).slug);
   if (!guide) return {};
   return {
     title: `${guide.title}: ${guide.subtitle}`,
@@ -29,11 +29,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
-  const guide = getGuide((await params).slug);
+  const guide = await getGuide((await params).slug);
   if (!guide) notFound();
   const shelf = getShelf(guide.shelf);
-  const related = getPostsForShelf(guide.shelf).slice(0, 3);
-  const others = getGuides().filter((g) => g.slug !== guide.slug).slice(0, 4);
+  const related = (await getPostsForShelf(guide.shelf)).slice(0, 3);
+  const others = (await getGuides()).filter((g) => g.slug !== guide.slug).slice(0, 4);
   const c = colours[guide.colour];
 
   return (

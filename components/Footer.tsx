@@ -3,9 +3,9 @@ import { site } from "@/lib/site";
 import { getGuides, getShelves } from "@/lib/content";
 import { ExternalLink } from "@/components/ExternalLink";
 
-export function Footer() {
+export async function Footer() {
   const shelves = getShelves();
-  const guides = getGuides();
+  const guides = await getGuides();
   return (
     <footer className="on-dark mt-24 bg-ink text-paper">
       <div className="container grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">

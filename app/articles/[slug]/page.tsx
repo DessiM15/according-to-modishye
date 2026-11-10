@@ -12,14 +12,15 @@ import { getAdjacentPosts, getGuidesForShelf, getPost, getPosts, getShelf } from
 import { articleLd, breadcrumbLd, graph } from "@/lib/seo";
 import { colours, formatDate, site } from "@/lib/site";
 
-export const dynamicParams = false;
+// New articles published in the portal render on first visit without a redeploy.
+export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return getPosts().map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  return (await getPosts()).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const post = getPost((await params).slug);
+  const post = await getPost((await params).slug);
   if (!post) return {};
   const shelf = getShelf(post.shelf);
   return {
@@ -40,11 +41,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const post = getPost((await params).slug);
+  const post = await getPost((await params).slug);
   if (!post) notFound();
   const shelf = getShelf(post.shelf);
-  const { prev, next } = getAdjacentPosts(post.slug);
-  const guides = getGuidesForShelf(post.shelf).slice(0, 2);
+  const { prev, next } = await getAdjacentPosts(post.slug);
+  const guides = (await getGuidesForShelf(post.shelf)).slice(0, 2);
   const colour = shelf ? colours[shelf.colour] : colours.gold;
 
   return (

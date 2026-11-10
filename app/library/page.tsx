@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
 import { SectionHeader } from "@/components/SectionHeader";
-import { getPostsForShelf, getShelves } from "@/lib/content";
+import { getPosts, getShelves } from "@/lib/content";
 import { breadcrumbLd, graph } from "@/lib/seo";
 import { colours } from "@/lib/site";
 
@@ -16,9 +16,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/library" },
 };
 
-export default function LibraryPage() {
+export default async function LibraryPage() {
   const shelves = getShelves();
-  const total = shelves.reduce((n, s) => n + getPostsForShelf(s.slug).length, 0);
+  const posts = await getPosts();
+  const onShelf = (slug: string) => posts.filter((p) => p.shelf === slug);
+  const total = posts.length;
   return (
     <>
       <div className="container pt-8">
@@ -41,7 +43,7 @@ export default function LibraryPage() {
 
       <div className="container mt-20 space-y-28">
         {shelves.map((s) => (
-          <Bookcase key={s.slug} shelf={s} posts={getPostsForShelf(s.slug)} />
+          <Bookcase key={s.slug} shelf={s} posts={onShelf(s.slug)} />
         ))}
       </div>
 

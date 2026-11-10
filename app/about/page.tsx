@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
 import { RoadMap, type RoadStop } from "@/components/RoadMap";
 import { SectionHeader } from "@/components/SectionHeader";
-import { getPost, getShelves } from "@/lib/content";
+import { getPosts, getShelves } from "@/lib/content";
 import { breadcrumbLd, graph, personLd } from "@/lib/seo";
 import { colours, site } from "@/lib/site";
 
@@ -18,10 +18,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
   const shelves = getShelves();
+  const posts = await getPosts();
+  const find = (slug: string) => posts.find((p) => p.slug === slug);
   const link = (slug: string, text: string) => {
-    const p = getPost(slug);
+    const p = find(slug);
     return p ? (
       <Link href={`/articles/${p.slug}`} className="text-ink">
         {text}
@@ -165,7 +167,7 @@ export default function AboutPage() {
             <li key={i} className="catalogue-card p-6 text-center">
               <p className="display text-xl font-semibold">{b.title}</p>
               <p className="mt-2 text-ink-2">{b.body}</p>
-              {getPost(b.slug) && (
+              {find(b.slug) && (
                 <Link href={`/articles/${b.slug}`} className="mt-4 inline-block font-mono text-sm text-ink">
                   Read the article
                 </Link>
