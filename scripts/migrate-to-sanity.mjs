@@ -194,4 +194,10 @@ for (let i = 0; i < docs.length; i += 20) {
   await tx.commit();
   console.log(`Wrote ${Math.min(i + 20, docs.length)}/${docs.length}`);
 }
+// Stamp each document with the time it was actually written. The site shows the WordPress "last updated" date
+// until a document is edited in the portal, and it tells the two apart by comparing _updatedAt with migratedAt.
+const written = await client.fetch(`*[_id in $ids]{_id, _updatedAt}`, { ids: docs.map((d) => d._id) });
+const stamp = client.transaction();
+for (const w of written) stamp.patch(w._id, { set: { migratedAt: w._updatedAt } });
+await stamp.commit();
 console.log(`Done. ${docs.length} documents, ${assets.size} images uploaded to ${projectId}/${dataset}.`);
