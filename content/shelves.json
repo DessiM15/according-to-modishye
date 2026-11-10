@@ -1,0 +1,183 @@
+{
+  "shelves": [
+    {
+      "slug": "boarding-school",
+      "title": "Boarding School",
+      "chapter": "Chapter one",
+      "colour": "coral",
+      "tagline": "Nigeria, a dormitory, and the lessons nobody put on the syllabus.",
+      "description": "Yeyeside spent her early school years in a Nigerian boarding school. These articles cover favouritism, bullying, survival and the three things she only understood once she left.",
+      "posts": [
+        "nigerian-boarding-school-lessons-how-to-survive-boarding-school-in-nigeria-spilling-the-tea%e2%98%95%ef%b8%8f",
+        "favoritism-in-boarding-school",
+        "boarding-school-favortism",
+        "school-advice",
+        "what-happened-after-i-moved-back-to-the-united-states-to-complete-high-school"
+      ]
+    },
+    {
+      "slug": "getting-into-college",
+      "title": "Getting Into College",
+      "chapter": "Chapter two",
+      "colour": "gold",
+      "tagline": "Applications, deadlines, and the move from senior year to freshman year.",
+      "description": "The part she is here to help with most. How to choose where to apply, what to know the day you graduate high school, and how to ask a professor for a recommendation that actually lands.",
+      "posts": [
+        "why-would-an-only-child-go-out-of-state-to-pursue-higher-educational-goals",
+        "5-things-to-know-after-you-graduate-high-school-that-you-wont-find-on-your-class-syllabimust-know",
+        "is-the-american-government-fulfilling-the-classroom-needs-to-achieve-student-success"
+      ]
+    },
+    {
+      "slug": "surviving-college",
+      "title": "Surviving College",
+      "chapter": "Chapter three",
+      "colour": "lavender",
+      "tagline": "Deadlines, homesickness, internships, and doing it all as an only child.",
+      "description": "Once you are in, the work changes. Time management, the apps worth installing, landing an internship as an undergraduate, and why being an only child changes the college experience.",
+      "posts": [
+        "why-the-solo-scholar-must-read-only-children-college",
+        "child-in-college",
+        "manage-time",
+        "essential-apps-that-every-college-student",
+        "how-i-got-a-law-internship-as-an-undergraduate-student-i-shadowed-an-immigration-lawyerstorytime",
+        "how-to-use-favoritism-to-your-advantage-at-college-and-work-in-2023",
+        "how-you-can-save-hundreds-to-thousands-of-dollars-using-this-savings-app-in-2020-digit-app-review"
+      ]
+    },
+    {
+      "slug": "money",
+      "title": "Money",
+      "chapter": "Chapter four",
+      "colour": "mint",
+      "tagline": "Saving, investing and paying for all of it.",
+      "description": "Saving on a student budget and the first steps into investing. This is the thinnest shelf today and the one with the most room to grow: financial aid, scholarships, and paying for college are next.",
+      "posts": [
+        "investing-for-beginners"
+      ]
+    },
+    {
+      "slug": "culture-and-voice",
+      "title": "Culture and Voice",
+      "chapter": "Chapter five",
+      "colour": "magenta",
+      "tagline": "Three passports, one voice. Family, language, style and speaking up.",
+      "description": "Nigerian, Namibian and South African. These are the personal essays: a Namibian mother, learning Yoruba, a first vote, and why she started writing in the first place.",
+      "posts": [
+        "why-did-i-start-blogging",
+        "namibian-mother",
+        "english-to-yoruba",
+        "raise-your-voice",
+        "i-voted-for-the-first-time-presidential-election-2016",
+        "do-not-ask-how-are-you",
+        "its-not-you-change-your-environment",
+        "clothes-clothes-and-more-clothes",
+        "the-purpose-of-artistic-and-architectural-terms-in-todays-world"
+      ]
+    }
+  ],
+  "slugOverrides": {
+    "nigerian-boarding-school-lessons-how-to-survive-boarding-school-in-nigeria-spilling-the-tea%e2%98%95%ef%b8%8f": "how-to-survive-boarding-school-in-nigeria",
+    "why-the-solo-scholar-must-read-only-children-college": "the-solo-scholar-only-children-in-college",
+    "manage-time": "how-to-crush-college-deadlines-with-outsourcing",
+    "boarding-school-favortism": "favoritism-in-boarding-school-part-2",
+    "favoritism-in-boarding-school": "who-is-most-at-risk-of-bullying-in-boarding-school",
+    "how-to-use-favoritism-to-your-advantage-at-college-and-work-in-2023": "how-to-use-favoritism-to-your-advantage",
+    "school-advice": "three-takeaways-after-leaving-boarding-school",
+    "what-happened-after-i-moved-back-to-the-united-states-to-complete-high-school": "moving-back-to-the-us-for-high-school",
+    "how-you-can-save-hundreds-to-thousands-of-dollars-using-this-savings-app-in-2020-digit-app-review": "my-first-undergraduate-essay-writing-tips",
+    "5-things-to-know-after-you-graduate-high-school-that-you-wont-find-on-your-class-syllabimust-know": "5-things-to-know-after-you-graduate-high-school",
+    "how-i-got-a-law-internship-as-an-undergraduate-student-i-shadowed-an-immigration-lawyerstorytime": "how-i-got-a-law-internship-as-an-undergraduate",
+    "child-in-college": "only-child-in-college",
+    "essential-apps-that-every-college-student": "essential-apps-for-college-students",
+    "why-would-an-only-child-go-out-of-state-to-pursue-higher-educational-goals": "why-an-only-child-should-go-out-of-state-for-college",
+    "is-the-american-government-fulfilling-the-classroom-needs-to-achieve-student-success": "is-the-us-government-meeting-classroom-needs",
+    "i-voted-for-the-first-time-presidential-election-2016": "i-voted-for-the-first-time",
+    "the-purpose-of-artistic-and-architectural-terms-in-todays-world": "artistic-and-architectural-terms-today",
+    "its-not-you-change-your-environment": "its-not-you-change-your-environment",
+    "clothes-clothes-and-more-clothes": "clothes-clothes-and-more-clothes"
+  },
+  "guides": {
+    "senior-college-freshmen-route-6-steps": {
+      "slug": "senior-to-college-freshman-route",
+      "title": "The Senior-to-College Freshman Route",
+      "subtitle": "Navigating college applications in 6 steps",
+      "shelf": "getting-into-college",
+      "colour": "gold",
+      "pages": "PDF roadmap",
+      "audience": "High school seniors and their parents"
+    },
+    "prof-recommended-checklist": {
+      "slug": "prof-recommended",
+      "title": "Prof Recommended",
+      "subtitle": "Connections first, recommendations next: your request checklist",
+      "shelf": "getting-into-college",
+      "colour": "coral",
+      "pages": "PDF checklist with email templates",
+      "audience": "Students asking for recommendation letters"
+    },
+    "homesickness-survival-guide": {
+      "slug": "homesickness-survival-guide",
+      "title": "The Homesickness Survival Guide",
+      "subtitle": "Three pages of coping strategies, prompts and checklists",
+      "shelf": "surviving-college",
+      "colour": "lavender",
+      "pages": "3-page PDF",
+      "audience": "First-year students away from home"
+    },
+    "double-dawn-track-list": {
+      "slug": "double-dawn",
+      "title": "Double Dawn",
+      "subtitle": "The track list for working pro and schooling smart",
+      "shelf": "surviving-college",
+      "colour": "mint",
+      "pages": "Weekly PDF track list",
+      "audience": "Graduate students who also work"
+    },
+    "track-list-for-working-smart": {
+      "slug": "double-dusk",
+      "title": "Double Dusk",
+      "subtitle": "The track list for working pro and schooling smart",
+      "shelf": "surviving-college",
+      "colour": "magenta",
+      "pages": "Weekly PDF track list",
+      "audience": "Graduate students applying class to career"
+    },
+    "jaw-track-navigating-corrective-jaw-surgery": {
+      "slug": "jaw-track",
+      "title": "Jaw Track",
+      "subtitle": "Navigating pre and post corrective jaw surgery",
+      "shelf": "culture-and-voice",
+      "colour": "coral",
+      "pages": "2-page PDF tracker",
+      "audience": "Anyone preparing for or recovering from jaw surgery"
+    }
+  },
+  "titles": {
+    "why-the-solo-scholar-must-read-only-children-college": "Why I Wrote The Solo Scholar: A Must-Read for Only Children in College",
+    "manage-time": "How to Crush College Deadlines and Exams: The Power of Outsourcing",
+    "boarding-school-favortism": "Favoritism in Boarding School: How to Recognize and Leverage It (Part 2)",
+    "favoritism-in-boarding-school": "Who Is Most at Risk of Bullying in Boarding Schools?",
+    "how-to-use-favoritism-to-your-advantage-at-college-and-work-in-2023": "How to Use Favoritism to Your Advantage at College and Work",
+    "school-advice": "The 3 Takeaways I Learned Once I Left Boarding School",
+    "what-happened-after-i-moved-back-to-the-united-states-to-complete-high-school": "Boarding School Aftermath: From Nigeria to Graduating High School at 16",
+    "how-you-can-save-hundreds-to-thousands-of-dollars-using-this-savings-app-in-2020-digit-app-review": "Reading My First Undergraduate Essay: 3 Writing Tips for College Freshmen",
+    "how-i-got-a-law-internship-as-an-undergraduate-student-i-shadowed-an-immigration-lawyerstorytime": "How I Got a Law Internship as an Undergraduate Student",
+    "5-things-to-know-after-you-graduate-high-school-that-you-wont-find-on-your-class-syllabimust-know": "5 Things to Know After You Graduate High School That Are Not on Any Syllabus",
+    "nigerian-boarding-school-lessons-how-to-survive-boarding-school-in-nigeria-spilling-the-tea%e2%98%95%ef%b8%8f": "How to Survive Boarding School in Nigeria",
+    "the-purpose-of-artistic-and-architectural-terms-in-todays-world": "The Purpose of Artistic and Architectural Terms in Today's World",
+    "child-in-college": "What It Is Like to Be an Only Child in College: Freshman Year",
+    "is-the-american-government-fulfilling-the-classroom-needs-to-achieve-student-success": "Is the US Government Meeting Classroom Needs for Student Success?",
+    "clothes-clothes-and-more-clothes": "What Clothing and Hair Mean to Different Cultures",
+    "why-did-i-start-blogging": "Why Did I Start Blogging?",
+    "namibian-mother": "My Mom Speaks Six Languages",
+    "raise-your-voice": "Raise Your Voice",
+    "essential-apps-that-every-college-student": "3 Essential Apps Every College Student Needs",
+    "investing-for-beginners": "Investing for Beginners Using Acorns",
+    "i-voted-for-the-first-time-presidential-election-2016": "I Voted for the First Time in 2016",
+    "english-to-yoruba": "Am I a Real Nigerian If I Can't Speak Yoruba?",
+    "its-not-you-change-your-environment": "It's Not You, It's Your Environment",
+    "why-would-an-only-child-go-out-of-state-to-pursue-higher-educational-goals": "What to Consider Before Going Out of State as an Only Child",
+    "do-not-ask-how-are-you": "Why 'I'm Fine' Is Not a Valid Answer"
+  }
+}
