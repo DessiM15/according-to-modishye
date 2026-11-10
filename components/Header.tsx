@@ -33,7 +33,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/70 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
       <div className="container flex items-center justify-between gap-4 py-3">
-        <Link href="/" className="flex items-center gap-3 no-underline" aria-label="Modishye home">
+        <Link href="/" className="flex items-center gap-3 no-underline" aria-label="Modishye home" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <Image src="/images/yeye-logo.png" alt="" width={40} height={40} className="h-10 w-10 rounded-full bg-paper-2 object-cover object-top" priority />
           <span className="display text-xl font-semibold tracking-tight text-ink">Modishye</span>
         </Link>

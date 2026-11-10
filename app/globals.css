@@ -343,10 +343,11 @@ a { text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
   z-index: 2;
 }
 .tome-spine-text {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1 1 auto;
+  min-height: 0;
+  align-self: center;
+  overflow: hidden;
+  padding-top: 14px;
   writing-mode: vertical-rl;
   font-family: var(--font-mono);
   font-size: 0.68rem;

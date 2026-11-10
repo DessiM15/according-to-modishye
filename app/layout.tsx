@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Intro } from "@/components/Intro";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { JsonLd } from "@/components/JsonLd";
 import { graph, organizationLd, personLd, websiteLd } from "@/lib/seo";
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        <ScrollToTop />
         <Intro />
         <Header />
         <main id="main" tabIndex={-1}>
