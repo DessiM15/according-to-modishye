@@ -68,7 +68,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <p className="font-mono text-sm text-ink-3">{guide.currency} · instant PDF</p>
             </div>
             <div className="mt-5">
-              <BuyButton title={guide.title} price={guide.price} handle={guide.shopifyHandle} />
+              <BuyButton title={guide.title} price={guide.price} wooId={guide.wooId || null} />
             </div>
 
             <div className="prose mt-10" dangerouslySetInnerHTML={{ __html: guide.html }} />

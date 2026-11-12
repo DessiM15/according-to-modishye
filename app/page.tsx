@@ -112,6 +112,11 @@ export default async function HomePage() {
                 What is inside
               </Link>
             </div>
+            <p className="mt-6">
+              <Link href="/the-solo-scholar#reading" className="font-semibold text-gold underline decoration-2 underline-offset-4">
+                Hear her read a page (44 seconds)
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -161,7 +166,7 @@ export default async function HomePage() {
           eyebrow="On YouTube"
           id="video-title"
           title="The same story, told out loud."
-          intro="How she made up a lost year and graduated high school at sixteen. The channel covers boarding school, high school, community college and university."
+          intro="Her advice for walking into a new school where you know nobody. The channel covers boarding school, high school, community college and university."
           action={
             <ExternalLink href={site.social.youtube} className="btn">
               Subscribe on YouTube
@@ -169,7 +174,7 @@ export default async function HomePage() {
           }
         />
         <div className="mx-auto mt-10 max-w-3xl">
-          <YouTubeEmbed id="FdWgk05oDfQ" title="How I graduated high school at 16 after moving back to the US" />
+          <YouTubeEmbed id="hmpx9C-kPEA" title="How to survive being a new student. Advice for new students in high school" />
         </div>
       </section>
 

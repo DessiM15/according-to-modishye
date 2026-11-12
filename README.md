@@ -34,7 +34,7 @@ Copy `.env.example` to `.env.local`. Without a key, each feature works in previe
 |---|---|---|
 | Newsletter (Mailchimp, double opt-in, tagged by stage) | `MAILCHIMP_API_KEY`, `MAILCHIMP_SERVER_PREFIX`, `MAILCHIMP_AUDIENCE_ID` | Mailchimp > Account > Extras > API keys. Audience ID under Audience > Settings |
 | Contact form delivery (Web3Forms) | `WEB3FORMS_ACCESS_KEY` | web3forms.com, key registered to support@accordingtomodishyeblog.com. Speaking requests arrive with the subject "Speaking request: <school>" |
-| Guide checkout (Shopify Starter, 5 USD a month) | `NEXT_PUBLIC_SHOPIFY_DOMAIN`, plus `shopifyHandle` per guide in `content/guides.json` | Shopify admin after she creates the six products with the Digital Downloads app |
+| Guide checkout (her existing WooCommerce store) | `NEXT_PUBLIC_WOO_URL`, plus `wooId` per guide (already migrated, editable on the Shop tab in the portal) | The address WordPress lives at after cutover. Buttons link to `/checkout/?add-to-cart=<wooId>` |
 | Canonical URL | `NEXT_PUBLIC_SITE_URL` | Defaults to the current domain |
 | Portal content (Sanity) | `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET` | sanity.io/manage after `npx sanity init` in `studio/` |
 | Draft preview from the portal | `SANITY_API_READ_TOKEN` | sanity.io/manage > API > Tokens, Viewer role |
@@ -46,7 +46,7 @@ Copy `.env.example` to `.env.local`. Without a key, each feature works in previe
 Done on 10 Nov 2026: Sanity project `uvpgl52r` (dataset `production`), studio deployed at https://modishye.sanity.studio, all 35 documents and 44 images migrated, publish webhook live, Sanity env vars set on both Vercel projects for production and preview. Publish, edit and delete reach the live site within about ten seconds. Preview on site verified end to end.
 
 1. Invite her email to the Sanity project as Editor (sanity.io/manage > project > Members). Walk her through `docs/how-to-publish.md` on a call and record it.
-2. Shopify Starter: create the six products, upload the PDFs, paste each handle into the guide in the portal (Shop tab). Set `NEXT_PUBLIC_SHOPIFY_DOMAIN`.
+2. WooCommerce stays (decided 12 Nov 2026). The main domain moves to Vercel, so WordPress needs its own address (for example a `shop.` subdomain on the current host) with the WordPress and site URLs updated to match. Set `NEXT_PUBLIC_WOO_URL` to it. In WooCommerce, tick "Sold individually" on each product so a second click does not add a second copy, and place one test order.
 3. Mailchimp keys.
 4. Vercel Pro (commercial use). Point DNS. Keep her existing email: move the MX records with the domain.
 5. At cutover, three URL changes: the webhook URL in sanity.io/manage > API > Webhooks to `https://www.accordingtomodishyeblog.com/api/revalidate`; `SANITY_STUDIO_SITE_URL` in `studio/.env.production` then `npx sanity deploy`; `NEXT_PUBLIC_SITE_URL` on Vercel.

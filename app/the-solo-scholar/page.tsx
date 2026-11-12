@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookCover } from "@/components/BookCover";
+import { BookReading } from "@/components/BookReading";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExternalLink } from "@/components/ExternalLink";
 import { JsonLd } from "@/components/JsonLd";
@@ -9,7 +10,7 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { OpenBook, type BookPage } from "@/components/OpenBook";
 import { SectionHeader } from "@/components/SectionHeader";
 import { getPost, getShelf } from "@/lib/content";
-import { bookLd, breadcrumbLd, graph } from "@/lib/seo";
+import { bookLd, breadcrumbLd, graph, readingLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -69,6 +70,8 @@ export default async function BookPage() {
         </div>
       </section>
 
+      <BookReading author={site.author.name} />
+
       <section aria-labelledby="inside-title" className="container mt-24">
         <SectionHeader eyebrow="Open it up" id="inside-title" title="What is inside" />
         <ul className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
@@ -106,7 +109,7 @@ export default async function BookPage() {
       <div className="mt-24">
         <Newsletter />
       </div>
-      <JsonLd data={graph(bookLd(), breadcrumbLd([{ name: "Home", path: "/" }, { name: "The Solo Scholar", path: "/the-solo-scholar" }]))} />
+      <JsonLd data={graph(bookLd(), readingLd(), breadcrumbLd([{ name: "Home", path: "/" }, { name: "The Solo Scholar", path: "/the-solo-scholar" }]))} />
     </>
   );
 }

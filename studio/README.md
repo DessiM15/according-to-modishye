@@ -36,7 +36,7 @@ Environment, see `.env.example`: `SANITY_STUDIO_PROJECT_ID`, `SANITY_STUDIO_DATA
 |---|---|
 | `sanity.config.ts` | Plugins, schema, template override, preview action |
 | `schemaTypes/article.ts` | The article form, grouped into Write and Google |
-| `schemaTypes/guide.ts` | Guide page text, price shown on the site, Shopify handle |
+| `schemaTypes/guide.ts` | Guide page text, price shown on the site, WooCommerce product number |
 | `schemaTypes/legalPage.ts` | Privacy, terms, refunds, cookies |
 | `schemaTypes/blockContent.ts` | The allowed formatting |
 | `templates.ts` | Her blog post template |

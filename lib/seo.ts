@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 import type { Guide, Post, Shelf } from "@/lib/content";
+import { reading } from "@/components/BookReading";
 
 const abs = (path: string) => new URL(path, site.url).toString();
 
@@ -131,6 +132,24 @@ export function bookLd() {
       availability: "https://schema.org/InStock",
       seller: { "@type": "Organization", name: "Amazon" },
     },
+  };
+}
+
+// The author reading a page of the book on /the-solo-scholar.
+export function readingLd() {
+  return {
+    "@type": "VideoObject",
+    "@id": abs("/the-solo-scholar#reading"),
+    name: `${site.author.name} reads from ${site.book.title}`,
+    description: `A ${reading.seconds} second reading from the sophomore year chapter of ${site.book.title}: ${site.book.subtitle}, about making a plan and staying flexible.`,
+    thumbnailUrl: abs(reading.poster),
+    contentUrl: abs(reading.src),
+    uploadDate: reading.uploaded,
+    duration: `PT${reading.seconds}S`,
+    inLanguage: "en",
+    transcript: reading.transcript.join(" "),
+    creator: { "@id": personId },
+    about: { "@id": abs("/the-solo-scholar#book") },
   };
 }
 

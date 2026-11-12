@@ -2,18 +2,19 @@
 
 import { useId, useState } from "react";
 
-// Shopify Starter plan: each guide gets a product handle, and checkout runs on Shopify.
-// Set NEXT_PUBLIC_SHOPIFY_DOMAIN (e.g. modishye.myshopify.com) and the handle per guide to go live.
-export function BuyButton({ title, price, handle }: { title: string; price: number; handle: string | null }) {
-  const domain = process.env.NEXT_PUBLIC_SHOPIFY_DOMAIN;
+// Checkout runs on her WooCommerce store. The link adds the product to the cart and lands on checkout,
+// so buyers never see the old WordPress theme's product page.
+// Set NEXT_PUBLIC_WOO_URL to the store's address (e.g. https://shop.accordingtomodishyeblog.com) to go live.
+export function BuyButton({ title, price, wooId }: { title: string; price: number; wooId: number | null }) {
+  const store = process.env.NEXT_PUBLIC_WOO_URL?.replace(/\/+$/, "");
   const [open, setOpen] = useState(false);
   const noteId = useId();
 
-  if (domain && handle) {
+  if (store && wooId) {
     return (
-      <a href={`https://${domain}/products/${handle}`} className="btn btn-gold text-base" target="_blank" rel="noopener noreferrer">
+      <a href={`${store}/checkout/?add-to-cart=${wooId}`} className="btn btn-gold text-base" target="_blank" rel="noopener noreferrer">
         Get the guide · ${price}
-        <span className="sr-only"> (opens Shopify checkout in a new tab)</span>
+        <span className="sr-only"> (opens secure checkout in a new tab)</span>
       </a>
     );
   }
@@ -24,7 +25,7 @@ export function BuyButton({ title, price, handle }: { title: string; price: numb
         Get the guide · ${price}
       </button>
       <p id={noteId} hidden={!open} className="mt-3 max-w-md rounded-lg border border-line bg-paper-2 p-3 text-sm text-ink-2">
-        Preview build. Secure checkout for {title} opens on Shopify once the store is connected at launch. Instant PDF delivery to your email.
+        Preview build. Secure checkout for {title} opens once the store is connected at launch. Instant PDF delivery to your email.
       </p>
     </div>
   );

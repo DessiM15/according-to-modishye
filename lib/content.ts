@@ -52,7 +52,6 @@ export type Guide = {
   imageAlt: string;
   description: string;
   html: string;
-  shopifyHandle: string | null;
 };
 
 export type LegalPage = { slug: string; title: string; modified: string; html: string };

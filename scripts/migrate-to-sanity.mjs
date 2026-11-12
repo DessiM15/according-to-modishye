@@ -160,7 +160,6 @@ for (const [i, g] of guides.entries()) {
     description: g.description,
     price: g.price,
     currency: g.currency || "USD",
-    shopifyHandle: g.shopifyHandle || undefined,
     order: i + 1,
     legacySlug: g.legacySlug,
     wooId: g.wooId,

@@ -210,7 +210,6 @@ for (const pr of products) {
     imageAlt: pr.images?.[0]?.alt || `${meta.title} cover`,
     description,
     html,
-    shopifyHandle: null,
   });
   redirects.push({ source: `/product/${pr.slug}`, destination: `/guides/${meta.slug}` });
 }

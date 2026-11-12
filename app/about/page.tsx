@@ -5,7 +5,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExternalLink } from "@/components/ExternalLink";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
-import { RoadMap, type RoadStop } from "@/components/RoadMap";
 import { SectionHeader } from "@/components/SectionHeader";
 import { getPosts, getShelves } from "@/lib/content";
 import { breadcrumbLd, graph, personLd } from "@/lib/seo";
@@ -32,14 +31,6 @@ export default async function AboutPage() {
       text
     );
   };
-
-  const stops: RoadStop[] = [
-    { when: "Nigeria", title: "Boarding school", colour: shelves[0].colour, body: "Small classes, big social rules. Favoritism, bullying and finding her voice.", href: `/library/${shelves[0].slug}` },
-    { when: "July 2013", title: "Houston", colour: shelves[1].colour, body: "Weeks to pick a school. Bellaire High School, starting as a sophomore.", href: `/library/${shelves[1].slug}` },
-    { when: "2015", title: "Graduated at 16", colour: shelves[2].colour, body: "On time, after making up the lost year. Then community college.", href: `/library/${shelves[2].slug}` },
-    { when: "Undergrad", title: "Economics", colour: shelves[3].colour, body: "Private college in Iowa, a professor's advice to invest early, a law internship.", href: `/library/${shelves[3].slug}` },
-    { when: "2019 to now", title: "The blog, the channel, the book", colour: shelves[4].colour, body: "Writing for other only children. The Solo Scholar, published January 2025.", href: `/library/${shelves[4].slug}` },
-  ];
 
   const chapters = [
     {
@@ -128,13 +119,6 @@ export default async function AboutPage() {
             <Image src="/images/modishye-frame.png" alt="According to Modishye illustration: a woman in profile with natural hair, framed by an arch of flowers and leaves" width={875} height={1400} sizes="(min-width: 768px) 20rem, 70vw" className="h-auto w-full" priority />
           </div>
           <span className="stamp absolute -bottom-3 left-4 bg-paper text-ink">Only child · 3 passports</span>
-        </div>
-      </section>
-
-      <section aria-labelledby="road-title" className="container mt-24">
-        <SectionHeader eyebrow="The road so far" id="road-title" title="Five stops, five shelves" intro="The library is organised the way her life was. Follow the road, then read the chapter that matches where you are." />
-        <div className="mt-4">
-          <RoadMap stops={stops} endLabel="Today" />
         </div>
       </section>
 

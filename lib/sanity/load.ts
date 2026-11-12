@@ -41,7 +41,6 @@ type GuideDoc = {
   price: number;
   currency?: string;
   description?: string;
-  shopifyHandle?: string;
   image?: Img;
   body?: PortableTextBlock[];
 };
@@ -56,7 +55,7 @@ const query = `{
     cover{ ${imageFields} }, ${bodyFields}
   },
   "guides": *[_type == "guide" && defined(slug.current)] | order(coalesce(order, 99) asc, title asc) {
-    _updatedAt, title, "slug": slug.current, subtitle, shelf, colour, pages, audience, legacySlug, wooId, price, currency, description, shopifyHandle,
+    _updatedAt, title, "slug": slug.current, subtitle, shelf, colour, pages, audience, legacySlug, wooId, price, currency, description,
     image{ ${imageFields} }, ${bodyFields}
   },
   "pages": *[_type == "legalPage" && defined(slug.current)] | order(title asc) {
@@ -134,7 +133,6 @@ function toGuide(g: GuideDoc): Guide {
     imageAlt: g.image?.alt ?? `${g.title} cover`,
     description: g.description ?? "",
     html: blocksToHtml(g.body),
-    shopifyHandle: g.shopifyHandle || null,
   };
 }
 

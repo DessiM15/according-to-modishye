@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const steps = [
   { title: "Pick a guide", body: "Each one is a short PDF built around a single moment: applying, arriving, asking, or balancing work and class." },
-  { title: "Check out on Shopify", body: "Card, Apple Pay or Google Pay. Secure checkout, no account needed." },
+  { title: "Check out", body: "The button opens secure checkout in a new tab with the guide already in your cart." },
   { title: "Download instantly", body: "The PDF lands in your email the moment the order goes through. Print it or keep it on your phone." },
 ];
 

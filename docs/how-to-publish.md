@@ -36,7 +36,7 @@ Open it, click the three dots next to Publish, choose **Unpublish**. It leaves t
 
 ## Guides and legal pages
 
-**Guides (shop)** holds the text and cover for each PDF. The price shown on the site is on the Shop tab, keep it the same as the price in Shopify, which is where people actually pay. **Legal pages** are the privacy policy, terms, refunds and cookies pages.
+**Guides (shop)** holds the text and cover for each PDF. The price shown on the site is on the Shop tab, keep it the same as the price in WooCommerce, which is where people actually pay. A new guide also needs its WooCommerce product number on the Shop tab so the buy button knows what to sell. **Legal pages** are the privacy policy, terms, refunds and cookies pages.
 
 ## If something looks wrong
 
