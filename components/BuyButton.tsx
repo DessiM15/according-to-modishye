@@ -2,8 +2,8 @@
 
 import { useId, useState } from "react";
 
-// Checkout runs on her WooCommerce store. The link adds the product to the cart and lands on checkout,
-// so buyers never see the old WordPress theme's product page.
+// Checkout runs on her WooCommerce store. The link adds the guide to the order and lands on checkout in the
+// same tab, so buyers never see the old WordPress theme and can come back for another guide.
 // Set NEXT_PUBLIC_WOO_URL to the store's address (e.g. https://shop.accordingtomodishyeblog.com) to go live.
 export function BuyButton({ title, price, wooId }: { title: string; price: number; wooId: number | null }) {
   const store = process.env.NEXT_PUBLIC_WOO_URL?.replace(/\/+$/, "");
@@ -12,9 +12,9 @@ export function BuyButton({ title, price, wooId }: { title: string; price: numbe
 
   if (store && wooId) {
     return (
-      <a href={`${store}/checkout/?add-to-cart=${wooId}`} className="btn btn-gold text-base" target="_blank" rel="noopener noreferrer">
+      <a href={`${store}/checkout/?add-to-cart=${wooId}`} className="btn btn-gold text-base">
         Get the guide · ${price}
-        <span className="sr-only"> (opens secure checkout in a new tab)</span>
+        <span className="sr-only"> (adds it to your order and opens secure checkout)</span>
       </a>
     );
   }

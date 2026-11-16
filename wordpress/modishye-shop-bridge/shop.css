@@ -1,0 +1,185 @@
+/* Checkout pages dressed like the new Modishye site: paper background, ink text, gold pay button. */
+body.modishye-shop {
+  --m-paper: #fbf7ee;
+  --m-paper-2: #f3ebda;
+  --m-ink: #1a1917;
+  --m-ink-2: #4b4740;
+  --m-line: #d8cdb8;
+  --m-gold: #ffd23f;
+  --m-coral-deep: #b9201d;
+  margin: 0;
+  background: var(--m-paper) !important;
+  color: var(--m-ink);
+  font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* Anything the old theme still prints outside our template stays hidden. */
+body.modishye-shop #main-header,
+body.modishye-shop #top-header,
+body.modishye-shop #main-footer,
+body.modishye-shop #et-main-area > #main-footer,
+body.modishye-shop .et-l--header,
+body.modishye-shop .et-l--footer,
+body.modishye-shop #sidebar,
+body.modishye-shop .et_pb_scroll_top {
+  display: none !important;
+}
+
+.modishye-skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--m-ink);
+  color: var(--m-paper);
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+.modishye-skip:focus { top: 0.75rem; }
+
+.modishye-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: min(100% - 2.5rem, 68rem);
+  margin: 0 auto;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--m-line);
+}
+.modishye-wordmark {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  color: var(--m-ink) !important;
+  text-decoration: none;
+}
+.modishye-return {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  color: var(--m-ink) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.modishye-main {
+  width: min(100% - 2.5rem, 68rem);
+  margin: 0 auto;
+  padding: 2.5rem 0 3.5rem;
+}
+.modishye-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--m-ink);
+  margin: 0 0 2rem;
+  padding: 0;
+}
+.modishye-content h2,
+.modishye-content h3,
+.modishye-content .wc-block-components-title {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--m-ink);
+}
+.modishye-content a { color: var(--m-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Fields */
+.modishye-content input[type="text"],
+.modishye-content input[type="email"],
+.modishye-content input[type="tel"],
+.modishye-content input[type="password"],
+.modishye-content select,
+.modishye-content textarea,
+.modishye-content .wc-block-components-text-input input,
+.modishye-content .wc-blocks-components-select__select {
+  border: 1.5px solid var(--m-ink-2) !important;
+  border-radius: 0.6rem !important;
+  background: #fff !important;
+  color: var(--m-ink) !important;
+  font-family: inherit;
+}
+.modishye-content input:focus-visible,
+.modishye-content select:focus-visible,
+.modishye-content textarea:focus-visible,
+.modishye-content button:focus-visible,
+.modishye-content a:focus-visible,
+.modishye-bar a:focus-visible,
+.modishye-foot a:focus-visible {
+  outline: 3px solid var(--m-ink) !important;
+  outline-offset: 2px;
+}
+
+/* Order summary reads as a card */
+.modishye-content .wc-block-checkout__sidebar,
+.modishye-content .wc-block-cart__sidebar,
+.modishye-content #order_review,
+.modishye-content .woocommerce-order {
+  background: #fff;
+  border: 1px solid var(--m-line);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+
+/* Buttons: gold with ink text, the same as "Get the guide" on the new site */
+.modishye-content .wc-block-components-button:not(.is-link),
+.modishye-content .button,
+.modishye-content button[type="submit"],
+.modishye-content #place_order {
+  background: var(--m-gold) !important;
+  color: var(--m-ink) !important;
+  border: 2px solid var(--m-ink) !important;
+  border-radius: 999px !important;
+  font-family: "DM Mono", ui-monospace, monospace !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.04em;
+  min-height: 48px;
+  padding: 0.85rem 1.4rem !important;
+  box-shadow: 4px 4px 0 var(--m-ink);
+  transition: transform 160ms ease;
+}
+.modishye-content .wc-block-components-button:not(.is-link):hover,
+.modishye-content .button:hover,
+.modishye-content #place_order:hover { transform: translateY(-2px); }
+
+.modishye-content .woocommerce-error,
+.modishye-content .wc-block-components-validation-error { color: var(--m-coral-deep); }
+
+/* Order summary as a cart: remove a guide, or go back for another */
+.modishye-content .modishye-remove {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.35rem 0;
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  color: var(--m-coral-deep);
+}
+.modishye-content .modishye-more {
+  margin: 0 0 1rem;
+  padding: 0;
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.9rem;
+}
+
+.modishye-back { margin-top: 2rem; font-family: "DM Mono", ui-monospace, monospace; }
+
+.modishye-foot {
+  width: min(100% - 2.5rem, 68rem);
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--m-line);
+  color: var(--m-ink-2);
+  font-size: 0.95rem;
+}
+.modishye-foot p { margin: 0 0 0.4rem; padding: 0; }
+.modishye-foot a { color: var(--m-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .modishye-content * { transition: none !important; }
+}
