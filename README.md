@@ -33,7 +33,7 @@ Copy `.env.example` to `.env.local`. Without a key, each feature works in previe
 | Feature | Env vars | Where she gets them |
 |---|---|---|
 | Newsletter (Mailchimp, double opt-in, tagged by stage) | `MAILCHIMP_API_KEY`, `MAILCHIMP_SERVER_PREFIX`, `MAILCHIMP_AUDIENCE_ID` | Mailchimp > Account > Extras > API keys. Audience ID under Audience > Settings |
-| Contact form delivery (Web3Forms) | `WEB3FORMS_ACCESS_KEY` | web3forms.com, key registered to support@accordingtomodishyeblog.com. Speaking requests arrive with the subject "Speaking request: <school>" |
+| Contact form delivery (Web3Forms) | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | web3forms.com, key registered to support@accordingtomodishyeblog.com. The form posts to Web3Forms from the browser; their free plan answers 403 to server-side calls. Speaking requests arrive with the subject "Speaking request: <school>" |
 | Guide checkout (her existing WooCommerce store) | `NEXT_PUBLIC_WOO_URL`, plus `wooId` per guide (already migrated, editable on the Shop tab in the portal) | The address WordPress lives at after cutover. Buttons link to `/checkout/?add-to-cart=<wooId>` |
 | Canonical URL | `NEXT_PUBLIC_SITE_URL` | Defaults to the current domain |
 | Portal content (Sanity) | `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET` | sanity.io/manage after `npx sanity init` in `studio/` |
@@ -59,4 +59,4 @@ Notes from setup: the site reads Sanity with `useCdn: false` and the webhook cal
 
 ## Accessibility and SEO baseline
 
-`node scripts/qa.mjs` passes with zero axe violations (WCAG 2.2 AA plus best practice) and zero horizontal overflow at 320, 375, 414, 768, 1024, 1280, 1536 and 1920 px on 11 page types. The brand magenta needs pure black text to pass AA. Every page has one h1, one main landmark, a skip link, visible focus, titled iframes, labelled links, and pinch zoom enabled.
+`node scripts/qa.mjs` passes with zero axe violations (WCAG 2.2 AA plus best practice) and zero horizontal overflow at 320, 375, 414, 768, 1024, 1280, 1536 and 1920 px on 11 page types. The brand magenta needs pure black text to pass AA. Every page has one h1, one main landmark, a skip link, visible focus, titled iframes, labeled links, and pinch zoom enabled.

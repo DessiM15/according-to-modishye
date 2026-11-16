@@ -16,7 +16,7 @@ Your current policy (effective February 20, 2024) was written for the old WordPr
 |---|---|---|
 | Newsletter sign-up | Email address and the stage the person picks (applying, first year, graduate, parent, or reader). They must click a confirmation email before they are added. | Mailchimp |
 | Contact form | Name, email, topic, subject and message. They tick a box agreeing to the privacy policy. | Web3Forms delivers it to your support inbox |
-| Speaking requests (same form) | The above, plus school or organisation, audience type, audience size, in person or virtual, city, and date. | Web3Forms delivers it to your support inbox |
+| Speaking requests (same form) | The above, plus school or organization, audience type, audience size, in person or virtual, city, and date. | Web3Forms delivers it to your support inbox |
 | Buying a guide | Handled on your existing WooCommerce store, which moves to its own "shop" address. Card payments go through WooPayments. | WooCommerce on Bluehost, WooPayments |
 | Videos | Videos are YouTube embeds in "privacy-enhanced" mode. | YouTube (Google) |
 | The site itself | Standard server logs (IP address, browser, pages requested). | Vercel hosts the site, Sanity stores the articles and images |
@@ -75,7 +75,7 @@ The new site also prints a "Last updated" date above the policy automatically, s
 >
 > a) When you write to us through the contact form, we collect your name, your e-mail address, the topic and subject of your message, and the message itself.
 >
-> b) When you send a speaking request, we also collect the name of your school or organisation, the type and approximate size of the audience, whether the event is in person or virtual, the city, and the date or time frame.
+> b) When you send a speaking request, we also collect the name of your school or organization, the type and approximate size of the audience, whether the event is in person or virtual, the city, and the date or time frame.
 >
 > c) Before sending, you are asked to confirm that you have read this Privacy Policy and agree to your details being used to reply to you. We use this information only to respond to your message or request.
 >

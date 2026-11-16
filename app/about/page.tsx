@@ -86,7 +86,7 @@ export default async function AboutPage() {
   ];
 
   const beliefs = [
-    { title: "Favor is a skill", body: "Hard work alone is not the whole story. Learn to recognise favoritism and use it honestly.", slug: "how-to-use-favoritism-to-your-advantage" },
+    { title: "Favor is a skill", body: "Hard work alone is not the whole story. Learn to recognize favoritism and use it honestly.", slug: "how-to-use-favoritism-to-your-advantage" },
     { title: "Change your environment", body: "If the place is wrong, the problem is not always you. Move.", slug: "its-not-you-change-your-environment" },
     { title: "Raise your voice", body: "Gather the facts, then say the thing. Observers do not get heard.", slug: "raise-your-voice" },
   ];

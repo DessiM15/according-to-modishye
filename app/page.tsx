@@ -35,7 +35,7 @@ export default async function HomePage() {
 
   const stops: RoadStop[] = [
     { when: "Nigeria", colour: shelves[0].colour, body: "Boarding school. Classes of ten to fifteen. The first lessons in resilience, favoritism and speaking up." },
-    { when: "July 2013", colour: shelves[1].colour, body: "Lands in Houston with a few weeks to choose a school. Enrols at Bellaire High School as a sophomore." },
+    { when: "July 2013", colour: shelves[1].colour, body: "Lands in Houston with a few weeks to choose a school. Enrolls at Bellaire High School as a sophomore." },
     { when: "2015", colour: shelves[2].colour, body: "Graduates at sixteen, on time, after making up a lost year." },
     { when: "Undergrad", colour: shelves[3].colour, body: "Community college, then private college, studying economics. A law internship in the last semester." },
     { when: "2019 to now", colour: shelves[4].colour, body: "Starts the blog and the YouTube channel. Writes The Solo Scholar, published January 2025." },

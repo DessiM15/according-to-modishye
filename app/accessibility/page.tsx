@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const done = [
   "Every page has one main heading, a main landmark, and a skip link to the content.",
-  "Text meets WCAG AA contrast on every background, including the brand colours.",
+  "Text meets WCAG AA contrast on every background, including the brand colors.",
   "Keyboard focus is always visible. The library shelf works with arrow keys.",
   "Links say where they go. Links that open a new tab say so.",
   "Videos load as a titled player, only when you press play.",

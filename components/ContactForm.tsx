@@ -7,6 +7,14 @@ type Status = { kind: "idle" } | { kind: "busy" } | { kind: "done"; mock: boolea
 
 const field = "w-full min-h-12 rounded-lg border-2 border-ink bg-white px-3 py-2 text-base text-ink placeholder:text-ink-3";
 
+// Web3Forms only accepts submissions sent from the visitor's browser, so the form posts to it directly.
+// The access key is public by design: it only routes messages to the inbox it was registered with.
+// Without the key the form answers as if it worked, so a local preview stays usable.
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+const SEND_ERROR = "Could not send right now. Email support@accordingtomodishyeblog.com instead.";
+
+const clean = (v: FormDataEntryValue | null, max: number) => (typeof v === "string" ? v : "").trim().slice(0, max);
+
 const topics = [
   { value: "general", label: "A question or hello" },
   { value: "speaking", label: "Speaking request" },
@@ -26,14 +34,56 @@ export function ContactForm({ initialTopic = "general" }: { initialTopic?: strin
     if (!form.reportValidity()) return;
     setStatus({ kind: "busy" });
     try {
-      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(form).entries())) });
-      const json = await res.json();
-      if (!res.ok || !json.ok) throw new Error(json.error ?? "Something went wrong.");
-      setStatus({ kind: "done", mock: Boolean(json.mock), speaking });
+      const data = new FormData(form);
+      const done = (mock: boolean) => {
+        setStatus({ kind: "done", mock, speaking });
+        form.reset();
+        setTopic("general");
+      };
+      // Honeypot: real people never fill this field.
+      if (clean(data.get("website"), 200)) return done(true);
+
+      const details: Record<string, string> = {};
+      let subject: string;
+      if (speaking) {
+        const organization = clean(data.get("organization"), 200);
+        subject = `Speaking request: ${organization}`;
+        const event: Record<string, string> = {
+          "School or organization": organization,
+          Audience: clean(data.get("audience"), 80),
+          "Audience size": clean(data.get("audienceSize"), 80),
+          Format: clean(data.get("format"), 40),
+          City: clean(data.get("city"), 120),
+          "Date or time frame": clean(data.get("when"), 160),
+        };
+        for (const [label, value] of Object.entries(event)) if (value) details[label] = value;
+      } else {
+        subject = clean(data.get("subject"), 200);
+      }
+      if (!WEB3FORMS_KEY) return done(true);
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `[Website] ${subject}`,
+          from_name: "Modishye website",
+          name: clean(data.get("name"), 120),
+          email: clean(data.get("email"), 200),
+          "What is this about": topics.find((t) => t.value === topic)?.label ?? topic,
+          ...details,
+          message: clean(data.get("message"), 5000),
+          botcheck: "",
+        }),
+      });
+      const json = (await res.json().catch(() => ({}))) as { success?: boolean };
+      if (!res.ok || !json.success) throw new Error(SEND_ERROR);
+      setStatus({ kind: "done", mock: false, speaking });
       form.reset();
       setTopic("general");
-    } catch (err) {
-      setStatus({ kind: "error", message: err instanceof Error ? err.message : "Something went wrong." });
+    } catch {
+      setStatus({ kind: "error", message: SEND_ERROR });
     }
   }
 
@@ -65,8 +115,8 @@ export function ContactForm({ initialTopic = "general" }: { initialTopic?: strin
         <fieldset className="grid gap-5 rounded-lg border-2 border-dashed border-ink/40 p-4 sm:p-5">
           <legend className="hand px-2 !text-[1.3rem]">About the event</legend>
           <div>
-            <label htmlFor={`${id}-organisation`} className="eyebrow block mb-1.5">School or organisation</label>
-            <input id={`${id}-organisation`} name="organisation" type="text" autoComplete="organization" required className={field} />
+            <label htmlFor={`${id}-organization`} className="eyebrow block mb-1.5">School or organization</label>
+            <input id={`${id}-organization`} name="organization" type="text" autoComplete="organization" required className={field} />
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
