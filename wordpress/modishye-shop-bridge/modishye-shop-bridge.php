@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Modishye Shop Bridge
  * Description: Turns this WordPress install into a checkout-only shop behind the new Modishye site. Buy links add a guide to the order and land on a clean branded checkout, and once WordPress lives on the shop address every other page forwards to the new site.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Dessi
  */
 
@@ -105,7 +105,7 @@ add_action('wp_enqueue_scripts', function () {
         return;
     }
     wp_enqueue_style('modishye-shop-fonts', 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600&family=Instrument+Sans:wght@400;600&display=swap', array(), null);
-    wp_enqueue_style('modishye-shop', plugins_url('shop.css', __FILE__), array('modishye-shop-fonts'), '1.1.0');
+    wp_enqueue_style('modishye-shop', plugins_url('shop.css', __FILE__), array('modishye-shop-fonts'), '1.1.1');
 }, 999);
 
 add_filter('body_class', function ($classes) {
