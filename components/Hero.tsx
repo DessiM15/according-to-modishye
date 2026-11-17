@@ -10,7 +10,7 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
   return (
     <section className="relative overflow-hidden" aria-labelledby="hero-title">
       <div className="container relative py-10 sm:py-16 md:py-24">
-        <div className="grid items-center gap-10 md:grid-cols-[1.3fr_0.7fr] lg:grid-cols-[1.25fr_0.75fr]">
+        <div className="grid items-center gap-10 md:grid-cols-[1.3fr_0.7fr] lg:grid-cols-[1.2fr_0.8fr]">
           <div className="relative z-10">
             <p className="eyebrow rise" style={{ "--delay": "0ms" } as React.CSSProperties}>
               Modishye Library · Est. 2019 · By Yeyeside Talabi
@@ -52,7 +52,7 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
             </nav>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[18rem] sm:max-w-xs md:max-w-sm">
+          <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-sm md:max-w-md md:-translate-y-10">
             <div className="rise relative" style={{ "--delay": "300ms" } as React.CSSProperties}>
               <div className="absolute left-[10.5%] right-[13.5%] top-[4.5%] bottom-[8.5%] -z-10 rounded-full bg-gold" aria-hidden="true" />
               <Image
@@ -60,7 +60,7 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
                 alt="Illustration of Yeyeside: a woman with a full natural afro, gold hoop earrings and a lavender dress, resting her chin on her hand beside a stack of books, inside an oval frame of flowers and leaves"
                 width={1122}
                 height={1402}
-                sizes="(min-width: 768px) 24rem, 70vw"
+                sizes="(min-width: 768px) 28rem, 80vw"
                 className="h-auto w-full"
                 priority
               />
