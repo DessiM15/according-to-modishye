@@ -23,11 +23,11 @@ const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name}: college advice from a Nigerian boarding school to a US degree`,
+    default: `${site.name}: college advice from boarding school to a US degree`,
     template: `%s | ${site.name}`,
   },
   description:
-    "Yeyeside Talabi went from a boarding school in Nigeria to graduating high school in Texas at 16, then community college, a private college and grad school. Everything she learned about getting into college and through it, shelved by topic.",
+    "Yeyeside Talabi was born in the United States, went to boarding school in Nigeria, and came back to graduate high school in Texas at 16, then community college, a private college and grad school. Everything she learned about getting into college and through it, shelved by topic.",
   applicationName: site.name,
   authors: [{ name: site.author.name, url: `${site.url}/about` }],
   creator: site.author.name,

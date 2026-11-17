@@ -11,9 +11,9 @@ import { breadcrumbLd, graph, personLd } from "@/lib/seo";
 import { colours, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Her story: Yeyeside Talabi, from a Nigerian boarding school to a US degree",
+  title: "Her story: Yeyeside Talabi, only child and author of The Solo Scholar",
   description:
-    "Yeyeside Talabi is a Nigerian, Namibian and South African writer and only child. She left boarding school in Nigeria, graduated high school in Houston at 16, studied economics, and wrote The Solo Scholar.",
+    "Yeyeside Talabi is a writer and only child, born in the United States, with roots in Nigeria, Namibia and South Africa. She went to boarding school in Nigeria, graduated high school in Houston at 16, studied Economics, and wrote The Solo Scholar.",
   alternates: { canonical: "/about" },
 };
 
@@ -34,12 +34,12 @@ export default async function AboutPage() {
 
   const chapters = [
     {
-      when: "Nigeria",
+      when: "Boarding school",
       colour: shelves[0].colour,
       title: "A boarding school with ten students in the senior arts class",
       body: (
         <>
-          Yeyeside Talabi grew up an only child with three passports: Nigerian, Namibian and South African. Her mother speaks six languages. School was a boarding school in Nigeria, where classes were small and the social rules were not. Favoritism, bullying and finding your voice were the first subjects she learned, and {link("how-to-survive-boarding-school-in-nigeria", "she still gets asked how to survive it")}.
+          Yeyeside Talabi is an only child with three passports, born in the United States. Her mother speaks six languages. She went to school in the US from kindergarten through sixth grade, then to boarding school in Nigeria, where classes were small and the social rules were not. Favoritism, bullying and finding your voice were the first subjects she learned there, and {link("how-to-survive-boarding-school-in-nigeria", "she still gets asked how to survive it")}.
         </>
       ),
     },
@@ -49,7 +49,7 @@ export default async function AboutPage() {
       title: "Houston, with a few weeks to choose a school",
       body: (
         <>
-          Leaving Nigeria felt abrupt. She arrived in the United States in July 2013 and had weeks to sit an entrance exam and pick a school. She qualified for private schools and chose none of them. She enrolled at Bellaire High School as a sophomore, a year behind where she would have been in Nigeria. {link("moving-back-to-the-us-for-high-school", "She wrote about the missing period")} and made a video about how she made the year up.
+          Leaving Nigeria felt abrupt. She arrived back in the United States in July 2013 and had weeks to sit an entrance exam and pick a school. She qualified for private schools and chose none of them. She enrolled at Bellaire High School as a sophomore, a year behind where she would have been in Nigeria. {link("moving-back-to-the-us-for-high-school", "She wrote about the missing period")} and made a video about how she made the year up.
         </>
       ),
     },
@@ -59,27 +59,27 @@ export default async function AboutPage() {
       title: "Graduated at sixteen, on time",
       body: (
         <>
-          Classes of 35 instead of 15. A magnet school where students go on to Columbia and Duke. She graduated in 2015 at sixteen, then found that college looked more like Nigeria than high school had: small rooms, professors who skip the roll call, and nobody checking your calendar for you. {link("only-child-in-college", "Freshman year as an only child")} is where the blog really begins.
+          Classes of 35 instead of 15. A magnet school where students go on to Columbia and Duke. She graduated in 2015 at sixteen, then found that college looked more like Nigeria than high school had: small rooms, professors who did not skip the roll call, and nobody checking your calendar for you. {link("only-child-in-college", "Freshman year as an only child")} is where the blog really begins.
         </>
       ),
     },
     {
       when: "Undergrad",
       colour: shelves[3].colour,
-      title: "Community college, Grinnell, and an economics degree",
+      title: "Community college, Grinnell, and an Economics degree",
       body: (
         <>
-          Community college first, then private college. At Grinnell College in Iowa she learned that {link("its-not-you-change-your-environment", "sometimes it is not you, it is your environment")}, and acted on it. She studied economics, took a professor&apos;s advice to {link("investing-for-beginners", "start investing early")}, and spent her last undergraduate semester {link("how-i-got-a-law-internship-as-an-undergraduate", "interning for an immigration lawyer")}.
+          Community college first, then private college. At Grinnell College in Iowa she learned that {link("its-not-you-change-your-environment", "sometimes it is not you, it is your environment")}, and acted on it. She studied Economics, took a professor&apos;s advice to {link("investing-for-beginners", "start investing early")}, and spent her last undergraduate semester {link("how-i-got-a-law-internship-as-an-undergraduate", "interning for an immigration lawyer")}.
         </>
       ),
     },
     {
-      when: "2019 to now",
+      when: "2017 to now",
       colour: shelves[4].colour,
-      title: "The blog, the channel, the book",
+      title: "The channel, the blog, the book",
       body: (
         <>
-          She {link("why-did-i-start-blogging", "started writing in 2019")} to reach other only children and to think clearly about her own road. The YouTube channel followed. In 2024 she wrote {site.book.title}: {site.book.subtitle}, published in January 2025 in paperback and Kindle. The guides in the shop are the checklists she used along the way.
+          She started creating videos in 2017, then {link("why-did-i-start-blogging", "the blog followed in 2019")}, to reach other only children and to think clearly about her own road. In 2024 she wrote {site.book.title}: {site.book.subtitle}, published in January 2025 in paperback and Kindle. The guides in the shop are the checklists she used along the way.
         </>
       ),
     },
@@ -102,14 +102,14 @@ export default async function AboutPage() {
           <p className="hand">Her story</p>
           <h1 className="mt-2 text-3xl font-semibold">Yeyeside Talabi</h1>
           <p className="mx-auto mt-5 max-w-[56ch] text-lg text-ink-2 md:mx-0">
-            Writer, YouTuber and author of The Solo Scholar. Nigerian, Namibian and South African. An only child who went from a boarding school in Nigeria to a US economics degree, and wrote down everything the road taught her so you do not have to learn it alone.
+            Writer, YouTuber and author of The Solo Scholar. An only child, born in the United States, with roots in Nigeria, Namibia and South Africa. She went to boarding school in Nigeria, came back to Houston for high school, earned an Economics degree, and wrote down everything the road taught her so you do not have to learn it alone.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
             <Link href="/library" className="btn">
               Open the library
             </Link>
             <Link href="/contact" className="btn btn-ghost">
-              Say hello
+              Ask the help desk
             </Link>
           </div>
         </div>

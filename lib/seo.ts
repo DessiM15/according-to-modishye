@@ -17,7 +17,7 @@ export function personLd() {
     url: abs("/about"),
     jobTitle: "Writer and author",
     description:
-      "Nigerian, Namibian and South African writer. Went from a Nigerian boarding school to graduating high school in Texas at 16, then community college, a private college and graduate school. Author of The Solo Scholar.",
+      "Writer and only child, born in the United States, with roots in Nigeria, Namibia and South Africa. Went to boarding school in Nigeria, came back and graduated high school in Texas at 16, then community college, a private college and graduate school. Author of The Solo Scholar.",
     sameAs: [site.social.youtube, site.social.x, site.social.snapchat, site.book.amazon],
     worksFor: { "@id": orgId },
   };

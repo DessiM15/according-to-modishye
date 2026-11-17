@@ -24,7 +24,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           <p className="eyebrow">Let&apos;s talk</p>
           <h1 className="mt-2 text-3xl font-semibold">Contact</h1>
           <p className="mt-4 text-lg text-ink-2">
-            A question about applying, a guide that did not download, a topic you want on a shelf, or just hello. Yeye reads everything and replies within a few days.
+            Have a question about applying, a guide that didn&apos;t download, or a topic you&apos;d like on the shelf? Send your inquiry below, and expect a response within a few days.
           </p>
           <dl className="mt-8 space-y-5">
             <div>

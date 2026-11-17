@@ -34,11 +34,11 @@ export default async function HomePage() {
   const latest = posts.slice(0, 3);
 
   const stops: RoadStop[] = [
-    { when: "Nigeria", colour: shelves[0].colour, body: "Boarding school. Classes of ten to fifteen. The first lessons in resilience, favoritism and speaking up." },
-    { when: "July 2013", colour: shelves[1].colour, body: "Lands in Houston with a few weeks to choose a school. Enrolls at Bellaire High School as a sophomore." },
+    { when: "Boarding school", colour: shelves[0].colour, body: "Born in the US and in school here through sixth grade. Then boarding school in Nigeria: the first lessons in resilience, favoritism and speaking up." },
+    { when: "July 2013", colour: shelves[1].colour, body: "Arrives back in Houston with a few weeks to choose a school. Enrolls at Bellaire High School as a sophomore." },
     { when: "2015", colour: shelves[2].colour, body: "Graduates at sixteen, on time, after making up a lost year." },
-    { when: "Undergrad", colour: shelves[3].colour, body: "Community college, then private college, studying economics. A law internship in the last semester." },
-    { when: "2019 to now", colour: shelves[4].colour, body: "Starts the blog and the YouTube channel. Writes The Solo Scholar, published January 2025." },
+    { when: "Undergrad", colour: shelves[3].colour, body: "Community college, then private college, studying Economics. A law internship in the last semester." },
+    { when: "2017 to now", colour: shelves[4].colour, body: "Starts the YouTube channel in 2017 and the blog in 2019. Writes The Solo Scholar, published January 2025." },
   ];
 
   return (
@@ -79,7 +79,7 @@ export default async function HomePage() {
           eyebrow="Her story"
           id="story-title"
           title="Three passports. One road to college."
-          intro="Nigerian, Namibian and South African. An only child. She did the transition this site is about, and she wrote it all down."
+          intro="An only child, born in the United States, with roots in Nigeria, Namibia and South Africa. She did the transition this site is about, and she wrote it all down."
           action={
             <Link href="/about" className="btn">
               Read her story

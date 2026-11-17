@@ -97,7 +97,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <p className="eyebrow">Written by</p>
                 <p className="display mt-1 text-xl font-semibold">{site.author.name}</p>
                 <p className="mt-1 text-ink-2">
-                  Nigerian, Namibian and South African. Only child. Went from a Nigerian boarding school to a US economics degree and wrote it all down. Author of The Solo Scholar.
+                  Only child, born in the United States, with roots in Nigeria, Namibia and South Africa. Boarding school in Nigeria, high school in Houston, an Economics degree, and she wrote it all down. Author of The Solo Scholar.
                 </p>
                 <Link href="/about" className="mt-3 inline-block font-medium text-ink">
                   Her story
