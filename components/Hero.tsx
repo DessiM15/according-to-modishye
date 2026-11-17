@@ -54,13 +54,14 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
 
           <div className="relative mx-auto w-full max-w-[18rem] sm:max-w-xs md:max-w-sm">
             <div className="rise relative" style={{ "--delay": "300ms" } as React.CSSProperties}>
+              <div className="absolute left-[10.5%] right-[13.5%] top-[4.5%] bottom-[8.5%] -z-10 rounded-full bg-gold" aria-hidden="true" />
               <Image
                 src="/images/modishye-portrait.png"
                 alt="Illustration of Yeyeside: a woman with a full natural afro, gold hoop earrings and a lavender dress, resting her chin on her hand beside a stack of books, inside an oval frame of flowers and leaves"
                 width={1122}
                 height={1402}
                 sizes="(min-width: 768px) 24rem, 70vw"
-                className="h-auto w-full rounded-card border-2 border-ink shadow-[4px_4px_0_#1a1917]"
+                className="h-auto w-full"
                 priority
               />
             </div>
