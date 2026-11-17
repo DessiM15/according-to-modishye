@@ -24,7 +24,7 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
               ))}
             </h1>
             <p className="rise mt-6 max-w-[52ch] text-lg text-ink-2" style={{ "--delay": "700ms" } as React.CSSProperties}>
-              Yeyeside Talabi went from a boarding school in Nigeria to graduating high school in Texas at sixteen, then community college and a private college, where she studied economics. Every lesson from that road is on these shelves, sorted by the moment you are in.
+              Yeyeside Talabi was born in the United States, went to boarding school in Nigeria, and came back to graduate high school in Texas at sixteen. Then came community college and a private college, where she studied Economics. Every lesson from that road is on these shelves, sorted by the moment you are in.
             </p>
             <div className="rise mt-8 flex flex-wrap gap-3" style={{ "--delay": "820ms" } as React.CSSProperties}>
               <Link href="/library" className="btn">
@@ -54,20 +54,19 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
 
           <div className="relative mx-auto w-full max-w-[18rem] sm:max-w-xs md:max-w-sm">
             <div className="rise relative" style={{ "--delay": "300ms" } as React.CSSProperties}>
-              <div className="absolute inset-x-[16%] top-[13%] bottom-[9%] -z-10 rounded-[50%] bg-gold" aria-hidden="true" />
               <Image
-                src="/images/modishye-frame.png"
-                alt="According to Modishye illustration: a woman in profile with natural hair, framed by an arch of flowers and leaves"
-                width={875}
-                height={1400}
+                src="/images/modishye-portrait.png"
+                alt="Illustration of Yeyeside: a woman with a full natural afro, gold hoop earrings and a lavender dress, resting her chin on her hand beside a stack of books, inside an oval frame of flowers and leaves"
+                width={1122}
+                height={1402}
                 sizes="(min-width: 768px) 24rem, 70vw"
-                className="h-auto w-full"
+                className="h-auto w-full rounded-card border-2 border-ink shadow-[4px_4px_0_#1a1917]"
                 priority
               />
             </div>
             <Link
               href="/the-solo-scholar"
-              className="sticker float absolute -left-2 bottom-3 bg-coral md:-left-8 md:bottom-6"
+              className="sticker float absolute -left-2 -bottom-5 bg-coral md:-left-8 md:-bottom-4"
               style={{ "--tilt": "-6deg", "--dur": "6s" } as React.CSSProperties}
             >
               The Solo Scholar, out now

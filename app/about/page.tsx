@@ -115,8 +115,7 @@ export default async function AboutPage() {
         </div>
         <div className="relative mx-auto w-full max-w-[17rem] sm:max-w-xs">
           <div className="relative">
-            <div className="absolute inset-x-[16%] top-[13%] bottom-[9%] -z-10 rounded-[50%] bg-lavender" aria-hidden="true" />
-            <Image src="/images/modishye-frame.png" alt="According to Modishye illustration: a woman in profile with natural hair, framed by an arch of flowers and leaves" width={875} height={1400} sizes="(min-width: 768px) 20rem, 70vw" className="h-auto w-full" priority />
+            <Image src="/images/modishye-portrait.png" alt="Illustration of Yeyeside: a woman with a full natural afro, gold hoop earrings and a lavender dress, resting her chin on her hand beside a stack of books, inside an oval frame of flowers and leaves" width={1122} height={1402} sizes="(min-width: 768px) 20rem, 70vw" className="h-auto w-full rounded-card border-2 border-ink shadow-[4px_4px_0_#1a1917]" priority />
           </div>
           <span className="stamp absolute -bottom-3 left-4 bg-paper text-ink">Only child · 3 passports</span>
         </div>
