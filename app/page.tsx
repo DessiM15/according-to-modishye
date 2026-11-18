@@ -78,7 +78,7 @@ export default async function HomePage() {
         <SectionHeader
           eyebrow="Her story"
           id="story-title"
-          title="Three passports. One road to college."
+          title="Two continents. One road to college."
           intro="An only child, born in the United States, with roots in Nigeria, Namibia and South Africa. She did the transition this site is about, and she wrote it all down."
           action={
             <Link href="/about" className="btn">

@@ -39,7 +39,7 @@ export default async function AboutPage() {
       title: "A boarding school with ten students in the senior arts class",
       body: (
         <>
-          Yeyeside Talabi is an only child with three passports, born in the United States. Her mother speaks six languages. She went to school in the US from kindergarten through sixth grade, then to boarding school in Nigeria, where classes were small and the social rules were not. Favoritism, bullying and finding your voice were the first subjects she learned there, and {link("how-to-survive-boarding-school-in-nigeria", "she still gets asked how to survive it")}.
+          Yeyeside Talabi is an only child who grew up proud of a multicultural heritage: her mother speaks six languages. She was born in the United States and went to school there from kindergarten through sixth grade, then to boarding school in Nigeria, where classes were small and the social rules were not. Favoritism, bullying and finding your voice were the first subjects she learned there, and {link("how-to-survive-boarding-school-in-nigeria", "she still gets asked how to survive it")}.
         </>
       ),
     },
@@ -118,7 +118,7 @@ export default async function AboutPage() {
             <div className="absolute left-[10.5%] right-[13.5%] top-[4.5%] bottom-[8.5%] -z-10 rounded-full bg-lavender" aria-hidden="true" />
             <Image src="/images/modishye-portrait.png" alt="Illustration of Yeyeside: a woman with a full natural afro, gold hoop earrings and a lavender dress, resting her chin on her hand beside a stack of books, inside an oval frame of flowers and leaves" width={1122} height={1402} sizes="(min-width: 768px) 20rem, 70vw" className="h-auto w-full" priority />
           </div>
-          <span className="stamp absolute -bottom-3 left-4 bg-paper text-ink">Only child · 3 passports</span>
+          <span className="stamp absolute -bottom-3 left-4 bg-paper text-ink">Only child · Two continents</span>
         </div>
       </section>
 
