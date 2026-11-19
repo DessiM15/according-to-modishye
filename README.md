@@ -41,6 +41,15 @@ Copy `.env.example` to `.env.local`. Without a key, each feature works in previe
 | Publish refreshes the site | `SANITY_REVALIDATE_SECRET` | Any long random string, pasted into the webhook in sanity.io/manage > API > Webhooks (URL `/api/revalidate`, trigger on create, update, delete, dataset `production`) |
 | `/studio` and `/wp-admin` redirect | `NEXT_PUBLIC_SANITY_STUDIO_URL` | The hosted studio URL from `npx sanity deploy` |
 
+## Live setup (launched 19 Nov 2026)
+
+- `www.accordingtomodishyeblog.com` is this site on Vercel (project `according-to-modishye-hkaq`). DNS at Bluehost: `A www 76.76.21.21`.
+- `accordingtomodishyeblog.com` (no www) is still her WordPress on Bluehost (`A @ 162.241.216.35`). WordPress Address and Site Address are both `https://accordingtomodishyeblog.com`. Shop Bridge 1.2.0 shows only checkout and cart there and forwards every other path to `www`. WordPress admin is at `https://accordingtomodishyeblog.com/wp-admin`; `/wp-admin` on `www` opens the Sanity portal.
+- Do not point `@` at Vercel: checkout lives there and email depends on the `mail` A record and MX, all on Bluehost.
+- `NEXT_PUBLIC_WOO_URL=https://accordingtomodishyeblog.com`, `NEXT_PUBLIC_SITE_URL=https://www.accordingtomodishyeblog.com`. The site forwards `/checkout`, `/cart` and old download links to the store (`next.config.ts`).
+- A `shop.` subdomain was tried first and dropped: Bluehost's server never served the certificate cPanel installed for it. A leftover `A shop` DNS record can be deleted.
+- Sanity webhook and `SANITY_STUDIO_SITE_URL` point at the `www` address.
+
 ## Launch checklist
 
 Production runs on the Vercel project `according-to-modishye-hkaq` (that is where the Mailchimp, Sanity and `NEXT_PUBLIC_WOO_URL` vars live); the older `according-to-modishye` project is a leftover and can be deleted. As of 18 Nov 2026 WordPress and the shop bridge plugin 1.1.1 still live on the main domain, and the new site's buy buttons check out there, which is why step 2 below must happen before DNS moves.
