@@ -6,7 +6,9 @@ import guidesJson from "@/content/guides.json";
 import pagesJson from "@/content/pages.json";
 import shelvesJson from "@/content/shelves.json";
 import type { Colour } from "@/lib/site";
+import { cache } from "react";
 import { hasSanity } from "@/lib/sanity/client";
+import { withShopProducts } from "@/lib/woo";
 
 export type Post = {
   slug: string;
@@ -98,8 +100,12 @@ export async function getAdjacentPosts(slug: string): Promise<{ prev?: Post; nex
   return { prev: onShelf[i + 1], next: onShelf[i - 1] };
 }
 
+// Guides from the portal, kept in step with her WooCommerce store: live prices, products she has taken down
+// removed, and products she has added in WooCommerce included even before they have a guide in the portal.
+const loadGuides = cache(async (): Promise<Guide[]> => withShopProducts((await content()).guides, shelves));
+
 export async function getGuides(): Promise<Guide[]> {
-  return (await content()).guides;
+  return loadGuides();
 }
 
 export async function getGuide(slug: string): Promise<Guide | undefined> {

@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 import redirects from "./content/redirects.json";
 
+// Covers for products she adds in WooCommerce are served from her store, wherever it lives.
+const wooHost = (() => {
+  try {
+    return new URL(process.env.NEXT_PUBLIC_WOO_URL ?? "").hostname;
+  } catch {
+    return null;
+  }
+})();
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -14,6 +23,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "cdn.sanity.io" },
+      { protocol: "https", hostname: "**.accordingtomodishyeblog.com", pathname: "/wp-content/uploads/**" },
+      ...(wooHost ? [{ protocol: "https" as const, hostname: wooHost, pathname: "/wp-content/uploads/**" }] : []),
     ],
   },
   async redirects() {

@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Guides: PDF checklists for college applications, first year and grad school",
   description:
-    "Six digital guides by Yeyeside Talabi: the six-step college application route, a recommendation letter checklist, a homesickness survival guide, and weekly track lists for working graduate students.",
+    "Digital guides by Yeyeside Talabi: the six-step college application route, a recommendation letter checklist, a homesickness survival guide, and weekly track lists for working graduate students.",
   alternates: { canonical: "/guides" },
 };
 
@@ -26,6 +26,8 @@ const steps = [
 export default async function GuidesPage() {
   const guides = await getGuides();
   const shelves = getShelves();
+  // Products added in WooCommerce without a shelf category show first, as the newest arrivals.
+  const unshelved = guides.filter((g) => !shelves.some((s) => s.slug === g.shelf));
   return (
     <>
       <div className="container pt-8">
@@ -36,6 +38,18 @@ export default async function GuidesPage() {
       </div>
 
       <div className="container mt-16 space-y-24">
+        {unshelved.length > 0 && (
+          <section aria-labelledby="guides-new">
+            <SectionHeader eyebrow="Just added" id="guides-new" title="New guides" />
+            <ul className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+              {unshelved.map((g) => (
+                <li key={g.slug}>
+                  <GuideCard guide={g} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         {shelves
           .filter((s) => guides.some((g) => g.shelf === s.slug))
           .map((s) => (

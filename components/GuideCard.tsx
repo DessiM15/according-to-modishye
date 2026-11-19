@@ -25,7 +25,7 @@ export function GuideCard({ guide }: { guide: Guide }) {
             {guide.title}
           </Link>
         </h3>
-        <p className="mt-1 text-sm text-ink-2">{guide.subtitle}</p>
+        {guide.subtitle && <p className="mt-1 text-sm text-ink-2">{guide.subtitle}</p>}
         <p className="mt-auto pt-3 font-mono text-sm">
           <span className="rounded-md bg-ink px-2 py-1 text-paper">${guide.price}</span>
           <span className="ml-2 text-xs text-ink-3">{guide.pages}</span>

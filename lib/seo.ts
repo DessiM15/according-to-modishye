@@ -98,7 +98,7 @@ export function productLd(guide: Guide) {
   return {
     "@type": "Product",
     "@id": abs(`/guides/${guide.slug}#product`),
-    name: `${guide.title}: ${guide.subtitle}`,
+    name: guide.subtitle ? `${guide.title}: ${guide.subtitle}` : guide.title,
     description: guide.description,
     image: guide.image ? [abs(guide.image)] : undefined,
     brand: { "@type": "Brand", name: "Modishye" },

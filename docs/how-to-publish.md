@@ -36,7 +36,7 @@ Open it, click the three dots next to Publish, choose **Unpublish**. It leaves t
 
 ## Guides and legal pages
 
-**Guides (shop)** holds the text and cover for each PDF. The price shown on the site is on the Shop tab, keep it the same as the price in WooCommerce, which is where people actually pay. A new guide also needs its WooCommerce product number on the Shop tab so the buy button knows what to sell. **Legal pages** are the privacy policy, terms, refunds and cookies pages.
+**Guides (shop)** holds the text and cover for each PDF. The shop itself runs on WooCommerce, and the site follows it. Add a product in WooCommerce and it shows on the Guides page within about five minutes, with the title, description, picture and price you typed there. Change a price in WooCommerce and the site shows the new price. Unpublish or delete a product and it leaves the site. To put a new product on a shelf, give it a WooCommerce category named after the shelf (for example Surviving College); without one it sits under New guides at the top. Creating a guide here in the portal is optional: do it when you want the one-line summary, the Format and Who it is for boxes or a different cover, and put the WooCommerce product number on the Shop tab so the two are linked. **Legal pages** are the privacy policy, terms, refunds and cookies pages.
 
 ## If something looks wrong
 

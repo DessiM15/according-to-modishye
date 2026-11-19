@@ -20,11 +20,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const guide = await getGuide((await params).slug);
   if (!guide) return {};
+  const title = guide.subtitle ? `${guide.title}: ${guide.subtitle}` : guide.title;
   return {
-    title: `${guide.title}: ${guide.subtitle}`,
+    title,
     description: guide.description,
     alternates: { canonical: `/guides/${guide.slug}` },
-    openGraph: { type: "website", title: `${guide.title}: ${guide.subtitle}`, description: guide.description, images: guide.image ? [guide.image] : undefined },
+    openGraph: { type: "website", title, description: guide.description, images: guide.image ? [guide.image] : undefined },
   };
 }
 
@@ -61,7 +62,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </Link>
             )}
             <h1 className="mt-5 text-3xl font-semibold">{guide.title}</h1>
-            <p className="mt-2 text-xl text-ink-2">{guide.subtitle}</p>
+            {guide.subtitle && <p className="mt-2 text-xl text-ink-2">{guide.subtitle}</p>}
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <p className="display text-2xl font-semibold">${guide.price}</p>
@@ -73,15 +74,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
             <div className="prose mt-10" dangerouslySetInnerHTML={{ __html: guide.html }} />
 
-            <dl className="mt-10 grid gap-6 rounded-card border border-line bg-white p-6 text-center shadow-card sm:grid-cols-3 sm:gap-4">
+            <dl className={`mt-10 grid gap-6 rounded-card border border-line bg-white p-6 text-center shadow-card sm:gap-4 ${guide.audience ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
               <div>
                 <dt className="eyebrow">Format</dt>
                 <dd className="mt-1 font-medium">{guide.pages}</dd>
               </div>
-              <div>
-                <dt className="eyebrow">Made for</dt>
-                <dd className="mt-1 font-medium">{guide.audience}</dd>
-              </div>
+              {guide.audience && (
+                <div>
+                  <dt className="eyebrow">Made for</dt>
+                  <dd className="mt-1 font-medium">{guide.audience}</dd>
+                </div>
+              )}
               <div>
                 <dt className="eyebrow">Delivery</dt>
                 <dd className="mt-1 font-medium">Emailed right after checkout</dd>
