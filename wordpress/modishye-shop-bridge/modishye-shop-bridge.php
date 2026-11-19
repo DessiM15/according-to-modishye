@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Modishye Shop Bridge
- * Description: Turns this WordPress install into a checkout-only shop behind the new Modishye site. Buy links add a guide to the order and land on a clean branded checkout, and once WordPress lives on the shop address every other page forwards to the new site.
- * Version: 1.1.1
+ * Description: Turns this WordPress install into a checkout-only shop behind the new Modishye site. Buy links add a guide to the order and land on a clean branded checkout, and once WordPress moves off the new site's address (Settings > General) every other page forwards to the new site.
+ * Version: 1.2.0
  * Author: Dessi
  */
 
@@ -15,10 +15,34 @@ if (!defined('MODISHYE_SITE_URL')) {
     define('MODISHYE_SITE_URL', 'https://www.accordingtomodishyeblog.com');
 }
 
-/** True once WordPress is being served from the shop address (shop.accordingtomodishyeblog.com). */
-function modishye_on_shop_host() {
+// Where the new site also answers while a visitor's network still sends the main address to this server
+// (the first hours after the DNS change). Override in wp-config.php the same way.
+if (!defined('MODISHYE_FALLBACK_URL')) {
+    define('MODISHYE_FALLBACK_URL', 'https://according-to-modishye-hkaq.vercel.app');
+}
+
+function modishye_host($url) {
+    $host = wp_parse_url($url, PHP_URL_HOST);
+    return $host ? strtolower($host) : '';
+}
+
+function modishye_request_host() {
     $host = isset($_SERVER['HTTP_HOST']) ? strtolower($_SERVER['HTTP_HOST']) : '';
-    return strpos($host, 'shop.') === 0;
+    return preg_replace('/:\d+$/', '', $host);
+}
+
+/**
+ * True once WordPress no longer lives at the new site's address, which happens the moment the addresses in
+ * Settings > General change (for example to accordingtomodishyeblog.com without the www).
+ */
+function modishye_shop_mode() {
+    $home = modishye_host(home_url());
+    return $home !== '' && $home !== modishye_host(MODISHYE_SITE_URL);
+}
+
+/** True when this request arrived on WordPress's own address while in shop mode. */
+function modishye_on_shop_host() {
+    return modishye_shop_mode() && modishye_request_host() === modishye_host(home_url());
 }
 
 /** Pages a buyer is allowed to see: checkout, cart, thank you page and the downloads account area. */
@@ -30,11 +54,11 @@ function modishye_is_shop_page() {
 }
 
 /**
- * Where "keep shopping" links go. Until WordPress moves to the shop address the new site is not live on the
- * main domain, so buyers go to the existing WordPress shop page. After the move they go to the new guides page.
+ * Where "keep shopping" links go. Until WordPress moves off the new site's address the new site is not live on
+ * the main domain, so buyers go to the existing WordPress shop page. After the move they go to the new guides page.
  */
 function modishye_guides_url() {
-    if (!modishye_on_shop_host() && function_exists('wc_get_page_permalink')) {
+    if (!modishye_shop_mode() && function_exists('wc_get_page_permalink')) {
         return wc_get_page_permalink('shop');
     }
     return rtrim(MODISHYE_SITE_URL, '/') . '/guides';
@@ -105,7 +129,7 @@ add_action('wp_enqueue_scripts', function () {
         return;
     }
     wp_enqueue_style('modishye-shop-fonts', 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600&family=Instrument+Sans:wght@400;600&display=swap', array(), null);
-    wp_enqueue_style('modishye-shop', plugins_url('shop.css', __FILE__), array('modishye-shop-fonts'), '1.1.1');
+    wp_enqueue_style('modishye-shop', plugins_url('shop.css', __FILE__), array('modishye-shop-fonts'), '1.2.0');
 }, 999);
 
 add_filter('body_class', function ($classes) {
@@ -115,30 +139,41 @@ add_filter('body_class', function ($classes) {
     return $classes;
 });
 
-/* 3. On the shop address, nothing else from the old site is reachable. */
+/* 3. Once WordPress has moved, nothing else from the old site is reachable. */
 
 add_action('template_redirect', function () {
-    if (!modishye_on_shop_host() || modishye_is_shop_page()) {
+    if (!modishye_shop_mode()) {
         return;
     }
     // File downloads from order emails, payment gateway callbacks and feeds for WooCommerce itself stay reachable.
     if (isset($_GET['download_file']) || isset($_GET['wc-ajax']) || isset($_GET['wc-api']) || is_robots()) {
         return;
     }
-    // Same path on the new site. It already knows where every old WordPress address moved to.
-    $path = isset($_SERVER['REQUEST_URI']) ? strtok($_SERVER['REQUEST_URI'], '?') : '/';
-    wp_redirect(rtrim(MODISHYE_SITE_URL, '/') . $path, 301, 'Modishye Shop Bridge');
+    // Checkout, cart and account pages show here. On any other address WordPress forwards them to its own.
+    if (modishye_is_shop_page()) {
+        return;
+    }
+    $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+    if (modishye_on_shop_host()) {
+        // Same path on the new site. It already knows where every old WordPress address moved to.
+        wp_redirect(rtrim(MODISHYE_SITE_URL, '/') . strtok($uri, '?'), 301, 'Modishye Shop Bridge');
+        exit;
+    }
+    // The request came in on another address, so this visitor's network has not caught up with the DNS change.
+    // Sending them to the main address would loop back here; the new site's own address shows them the new site.
+    nocache_headers();
+    wp_redirect(rtrim(MODISHYE_FALLBACK_URL, '/') . $uri, 302, 'Modishye Shop Bridge');
     exit;
 }, 1);
 
-// Keep the shop address out of Google.
+// Keep the shop out of Google.
 add_action('send_headers', function () {
-    if (modishye_on_shop_host()) {
+    if (modishye_shop_mode()) {
         header('X-Robots-Tag: noindex, nofollow', true);
     }
 });
 add_filter('wp_robots', function ($robots) {
-    if (modishye_on_shop_host() || modishye_is_shop_page()) {
+    if (modishye_shop_mode() || modishye_is_shop_page()) {
         return array('noindex' => true, 'nofollow' => true);
     }
     return $robots;
