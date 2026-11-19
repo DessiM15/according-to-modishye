@@ -10,7 +10,7 @@ const wooHost = (() => {
   }
 })();
 
-// Checkout, cart and account pages only exist on her store. Once the store has its own address, old order emails,
+// Checkout and cart pages only exist on her store (it has no account page; guides arrive by email). Once the store has its own address, old order emails,
 // bookmarks and download links that still point at this site are passed on to it.
 const store = process.env.NEXT_PUBLIC_WOO_URL?.replace(/\/+$/, "");
 const siteHost = (() => {
@@ -29,7 +29,7 @@ const storeRedirects =
           destination: `${store}/`,
           permanent: false,
         })),
-        ...["/checkout", "/cart", "/my-account"].flatMap((page) => [
+        ...["/checkout", "/cart"].flatMap((page) => [
           { source: page, destination: `${store}${page}/`, permanent: false },
           { source: `${page}/:path*`, destination: `${store}${page}/:path*`, permanent: false },
         ]),
