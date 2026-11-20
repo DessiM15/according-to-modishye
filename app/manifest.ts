@@ -9,6 +9,6 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "browser",
     background_color: "#fbf7ee",
     theme_color: "#fbf7ee",
-    icons: [{ src: "/images/yeye-logo.png", sizes: "500x500", type: "image/png" }],
+    icons: [{ src: "/images/yeye-logo.png", sizes: "512x512", type: "image/png" }],
   };
 }
