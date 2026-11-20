@@ -34,9 +34,9 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line/70 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
       <div className="container flex items-center justify-between gap-4 py-3">
         <Link href="/" className="flex items-center gap-3 no-underline" aria-label="Modishye home" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <span className="relative block h-10 w-10 shrink-0 overflow-hidden rounded-full bg-lavender" aria-hidden="true">
-            {/* The portrait includes its floral frame, so zoom in on her face for the small round avatar. */}
-            <Image src="/images/modishye-portrait.png" alt="" width={80} height={100} sizes="80px" className="h-full w-full origin-[50%_38%] scale-[2.1] object-cover" priority />
+          <span className="relative block h-10 w-10 shrink-0 overflow-hidden rounded-full" aria-hidden="true">
+            {/* The logo is her cut out of the hero portrait's floral frame, on the brand gold. */}
+            <Image src="/images/yeye-logo.png" alt="" width={80} height={80} sizes="80px" className="h-full w-full object-cover" priority />
           </span>
           <span className="display text-xl font-semibold tracking-tight text-ink">Modishye</span>
         </Link>

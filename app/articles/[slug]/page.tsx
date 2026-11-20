@@ -92,8 +92,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <footer className="container mt-16">
           <div className="mx-auto max-w-3xl rounded-card border border-line bg-white p-6 shadow-card sm:p-8">
             <div className="flex items-start gap-4">
-              <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full bg-lavender" aria-hidden="true">
-                    <Image src="/images/modishye-portrait.png" alt="" width={128} height={160} sizes="128px" className="h-full w-full origin-[50%_38%] scale-[2.1] object-cover" />
+              <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full" aria-hidden="true">
+                    <Image src="/images/yeye-logo.png" alt="" width={128} height={128} sizes="128px" className="h-full w-full object-cover" />
                   </span>
               <div>
                 <p className="eyebrow">Written by</p>
