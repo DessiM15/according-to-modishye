@@ -91,7 +91,7 @@ export function StartPage() {
     <div style={page}>
       <div style={wrap}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <img src="/static/yeye-logo.png" alt="" style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", background: brand.gold, border: `2px solid ${brand.ink}` }} />
+          <img src="/static/modishye-logo.png" alt="" style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", background: brand.gold, border: `2px solid ${brand.ink}` }} />
           <div>
             <p style={hand}>Your publishing desk</p>
             <h1 style={h1}>Hi {first}. What are we doing today?</h1>
