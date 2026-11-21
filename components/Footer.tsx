@@ -12,7 +12,7 @@ export async function Footer() {
         <div>
           <p className="display text-2xl font-semibold">Modishye</p>
           <p className="mt-3 max-w-sm text-paper/80">
-            Articles, guides and a book for students getting into college and through it, written by someone who did it the hard way.
+            Articles, guides and a book for students getting into college and through it, written by someone who got there on pure determination.
           </p>
           <p className="mt-6 font-mono text-xs tracking-[0.16em] uppercase text-paper/60">Est. {site.founded} · Online only</p>
         </div>
