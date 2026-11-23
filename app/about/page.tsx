@@ -101,7 +101,10 @@ export default async function AboutPage() {
         <div className="text-center md:text-left">
           <p className="hand">Her story</p>
           <h1 className="mt-2 text-3xl font-semibold">Yeyeside Talabi</h1>
-          <p className="mx-auto mt-5 max-w-[56ch] text-lg text-ink-2 md:mx-0">
+          <p className="mx-auto mt-5 max-w-[56ch] text-lg font-medium text-ink md:mx-0">
+            {site.author.intro}
+          </p>
+          <p className="mx-auto mt-4 max-w-[56ch] text-lg text-ink-2 md:mx-0">
             Writer, YouTuber and author of The Solo Scholar. An only child, born in the United States, with roots in Nigeria, Namibia and South Africa. She went to boarding school in Nigeria, came back to Houston for high school, earned an Economics degree, and wrote down everything the road taught her so you do not have to learn it alone.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">

@@ -10,7 +10,7 @@ export async function Footer() {
     <footer className="on-dark mt-24 bg-ink text-paper">
       <div className="container grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <p className="display text-2xl font-semibold">Modishye</p>
+          <p className="display text-2xl font-semibold">MODISHYE</p>
           <p className="mt-3 max-w-sm text-paper/80">
             Articles, guides and a book for students getting into college and through it, written by someone who got through on grit and wrote it all down.
           </p>

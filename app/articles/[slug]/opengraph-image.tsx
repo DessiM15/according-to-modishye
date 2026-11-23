@@ -13,8 +13,8 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const post = await getPost((await params).slug);
   const shelf = post ? getShelf(post.shelf) : undefined;
   return brandImage({
-    eyebrow: shelf ? `${shelf.chapter} · ${shelf.title}` : "Modishye Library",
-    title: post?.title ?? "Modishye",
+    eyebrow: shelf ? `${shelf.chapter} · ${shelf.title}` : "MODISHYE Library",
+    title: post?.title ?? "MODISHYE",
     footer: `By Yeyeside Talabi · ${post?.readingMinutes ?? 3} min read`,
     colour: shelf ? colours[shelf.colour].hex : "#ffd23f",
   });

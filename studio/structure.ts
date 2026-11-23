@@ -8,7 +8,7 @@ import { shelves } from "./shelves";
 // What she sees in the left column. Nothing else.
 export const structure: StructureResolver = (S) =>
   S.list()
-    .title("Modishye")
+    .title("MODISHYE")
     .items([
       S.listItem()
         .id("articles")

@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ legal: string }> }): Promise<Metadata> {
   const page = await getLegalPage((await params).legal);
   if (!page) return {};
-  return { title: page.title, description: `${page.title} for Modishye and accordingtomodishyeblog.com.`, alternates: { canonical: `/${page.slug}` }, robots: { index: false, follow: true } };
+  return { title: page.title, description: `${page.title} for MODISHYE and accordingtomodishyeblog.com.`, alternates: { canonical: `/${page.slug}` }, robots: { index: false, follow: true } };
 }
 
 export default async function LegalPage({ params }: { params: Promise<{ legal: string }> }) {

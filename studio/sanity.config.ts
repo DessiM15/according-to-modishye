@@ -15,7 +15,7 @@ const dataset = process.env.SANITY_STUDIO_DATASET ?? "production";
 
 export default defineConfig({
   name: "modishye",
-  title: "Modishye",
+  title: "MODISHYE",
   subtitle: "Publishing desk",
   icon: Logo,
   projectId,

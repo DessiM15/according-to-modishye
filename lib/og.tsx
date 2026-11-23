@@ -26,7 +26,7 @@ export async function brandImage({ eyebrow, title, footer, colour }: { eyebrow: 
           <div style={{ fontSize: title.length > 70 ? 56 : 72, lineHeight: 1.02, fontWeight: 600, maxWidth: 1000 }}>{title}</div>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 26, color: "#4b4740", fontFamily: "monospace" }}>
             <span>{footer}</span>
-            <span style={{ background: "#1a1917", color: "#fbf7ee", padding: "10px 18px", borderRadius: 999 }}>Modishye</span>
+            <span style={{ background: "#1a1917", color: "#fbf7ee", padding: "10px 18px", borderRadius: 999 }}>MODISHYE</span>
           </div>
         </div>
       </div>

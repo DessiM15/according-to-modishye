@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Yeyeside Talabi was born in the United States, went to boarding school in Nigeria, and came back to graduate high school in Texas at 16, then community college, a private college and grad school. Everything she learned about getting into college and through it, shelved by topic.",
+    "Yeyeside Talabi is the author of The Solo Scholar, a digital storyteller, and the founder and editor-in-chief of MODISHYE. She was born in the United States, went to boarding school in Nigeria, and came back to graduate high school in Texas at 16, then community college, a private college and grad school. Everything she learned about getting into college and through it, shelved by topic.",
   applicationName: site.name,
   authors: [{ name: site.author.name, url: `${site.url}/about` }],
   creator: site.author.name,

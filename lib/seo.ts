@@ -13,11 +13,11 @@ export function personLd() {
     "@type": "Person",
     "@id": personId,
     name: site.author.name,
-    alternateName: "Modishye",
+    alternateName: "MODISHYE",
     url: abs("/about"),
-    jobTitle: "Writer and author",
+    jobTitle: site.author.jobTitle,
     description:
-      "Writer and only child, born in the United States, with roots in Nigeria, Namibia and South Africa. Went to boarding school in Nigeria, came back and graduated high school in Texas at 16, then community college, a private college and graduate school. Author of The Solo Scholar.",
+      "Author of The Solo Scholar, digital storyteller, and founder and editor-in-chief of MODISHYE. Writer and only child, born in the United States, with roots in Nigeria, Namibia and South Africa. Went to boarding school in Nigeria, came back and graduated high school in Texas at 16, then community college, a private college and graduate school. Author of The Solo Scholar.",
     sameAs: [site.social.youtube, site.social.x, site.social.snapchat, site.book.amazon],
     worksFor: { "@id": orgId },
   };
@@ -28,7 +28,7 @@ export function organizationLd() {
     "@type": "Organization",
     "@id": orgId,
     name: site.legalName,
-    alternateName: "Modishye",
+    alternateName: "MODISHYE",
     url: site.url,
     logo: { "@type": "ImageObject", url: abs("/images/yeye-logo.png") },
     email: site.email,
@@ -101,7 +101,7 @@ export function productLd(guide: Guide) {
     name: guide.subtitle ? `${guide.title}: ${guide.subtitle}` : guide.title,
     description: guide.description,
     image: guide.image ? [abs(guide.image)] : undefined,
-    brand: { "@type": "Brand", name: "Modishye" },
+    brand: { "@type": "Brand", name: "MODISHYE" },
     category: "Digital download",
     offers: {
       "@type": "Offer",

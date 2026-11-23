@@ -68,7 +68,7 @@ export function ContactForm({ initialTopic = "general" }: { initialTopic?: strin
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
           subject: `[Website] ${subject}`,
-          from_name: "Modishye website",
+          from_name: "MODISHYE website",
           name: clean(data.get("name"), 120),
           email: clean(data.get("email"), 200),
           "What is this about": topics.find((t) => t.value === topic)?.label ?? topic,

@@ -4,7 +4,7 @@ export function Intro() {
   return (
     <div className="intro fixed inset-0 z-[90] place-items-center bg-paper pointer-events-none" aria-hidden="true">
       <div className="intro-card catalogue-card relative w-[min(88vw,28rem)] p-6 pt-14">
-        <p className="font-mono text-xs tracking-[0.18em] uppercase text-ink-3">Modishye Library · Date due</p>
+        <p className="font-mono text-xs tracking-[0.18em] uppercase text-ink-3">MODISHYE Library · Date due</p>
         <div className="mt-2 space-y-[1.05rem] font-mono text-sm text-ink-2">
           <p>Boarding school</p>
           <p>Getting into college</p>

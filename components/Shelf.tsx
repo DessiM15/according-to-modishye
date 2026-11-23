@@ -62,7 +62,7 @@ export function Shelf({ shelves, initial = "getting-into-college" }: { shelves: 
                   className="tome w-[7.6rem] sm:w-[8.6rem] md:w-[10.5rem]"
                   style={{ background: c.hex, color: c.ink, height: heights[i] }}
                 >
-                  <span className="tome-spine-text">Modishye · Shelf {String(i + 1).padStart(2, "0")}</span>
+                  <span className="tome-spine-text">MODISHYE · Shelf {String(i + 1).padStart(2, "0")}</span>
                   <span className="tome-label">
                     <span className="hand block !text-[1rem] leading-none sm:!text-[1.3rem]">{shelf.chapter}</span>
                     <span className="display mt-1 block text-[0.95rem] font-semibold leading-[1.1] sm:text-[1.15rem]">{shelf.title}</span>

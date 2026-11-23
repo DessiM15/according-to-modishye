@@ -1,6 +1,6 @@
 export const site = {
-  name: "Modishye",
-  legalName: "According to Modishye",
+  name: "MODISHYE",
+  legalName: "According to MODISHYE",
   tagline: "The college library for the only child in the room",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.accordingtomodishyeblog.com",
   email: "support@accordingtomodishyeblog.com",
@@ -8,6 +8,9 @@ export const site = {
     name: "Yeyeside Talabi",
     shortName: "Yeye",
     role: "Writer, YouTuber and author of The Solo Scholar",
+    // The one-sentence introduction the client approved (23 Nov 2026).
+    intro: "Yeyeside Talabi is the author of The Solo Scholar, a digital storyteller, and the founder and editor-in-chief of MODISHYE.",
+    jobTitle: "Author, digital storyteller, founder and editor-in-chief of MODISHYE",
   },
   founded: "2019",
   social: {

@@ -33,12 +33,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/70 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
       <div className="container flex items-center justify-between gap-4 py-3">
-        <Link href="/" className="flex items-center gap-3 no-underline" aria-label="Modishye home" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <Link href="/" className="flex items-center gap-3 no-underline" aria-label="MODISHYE home" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <span className="relative block h-10 w-10 shrink-0 overflow-hidden rounded-full" aria-hidden="true">
             {/* The logo is her cut out of the hero portrait's floral frame, on the brand gold. */}
             <Image src="/images/yeye-logo.png" alt="" width={80} height={80} sizes="80px" className="h-full w-full object-cover" priority />
           </span>
-          <span className="display text-xl font-semibold tracking-tight text-ink">Modishye</span>
+          <span className="display text-xl font-semibold tracking-tight text-ink">MODISHYE</span>
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">

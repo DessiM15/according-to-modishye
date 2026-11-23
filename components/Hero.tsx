@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { colours } from "@/lib/site";
+import { colours, site } from "@/lib/site";
 import type { Shelf } from "@/lib/content";
 
 const tilts = [-3, 2, -2, 3, -1];
@@ -13,7 +13,7 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
         <div className="grid items-center gap-10 md:grid-cols-[1.3fr_0.7fr] lg:grid-cols-[1.2fr_0.8fr]">
           <div className="relative z-10">
             <p className="eyebrow rise" style={{ "--delay": "0ms" } as React.CSSProperties}>
-              Modishye Library · Est. 2019 · By Yeyeside Talabi
+              MODISHYE Library · Est. 2019 · By Yeyeside Talabi
             </p>
             <h1 id="hero-title" className="mt-4 text-hero font-semibold">
               {words.map((w, i) => (
@@ -23,8 +23,11 @@ export function Hero({ shelves }: { shelves: Shelf[] }) {
                 </span>
               ))}
             </h1>
-            <p className="rise mt-6 max-w-[52ch] text-lg text-ink-2" style={{ "--delay": "700ms" } as React.CSSProperties}>
-              Yeyeside Talabi was born in the United States, went to boarding school in Nigeria, and came back to graduate high school in Texas at sixteen. Then came community college and a private college, where she studied Economics. Every lesson from that road is on these shelves, sorted by the moment you are in.
+            <p className="rise mt-6 max-w-[52ch] text-lg font-medium text-ink" style={{ "--delay": "640ms" } as React.CSSProperties}>
+              {site.author.intro}
+            </p>
+            <p className="rise mt-4 max-w-[52ch] text-lg text-ink-2" style={{ "--delay": "700ms" } as React.CSSProperties}>
+              She was born in the United States, went to boarding school in Nigeria, and came back to graduate high school in Texas at sixteen. Then came community college and a private college, where she studied Economics. Every lesson from that road is on these shelves, sorted by the moment you are in.
             </p>
             <div className="rise mt-8 flex flex-wrap gap-3" style={{ "--delay": "820ms" } as React.CSSProperties}>
               <Link href="/library" className="btn">

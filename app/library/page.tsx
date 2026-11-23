@@ -12,7 +12,7 @@ import { colours } from "@/lib/site";
 export const metadata: Metadata = {
   title: "The Library: college advice shelved by the moment you are in",
   description:
-    "Every Modishye article on one page. Five shelves: boarding school, getting into college, surviving college, money, and culture and voice. Written by Yeyeside Talabi.",
+    "Every MODISHYE article on one page. Five shelves: boarding school, getting into college, surviving college, money, and culture and voice. Written by Yeyeside Talabi.",
   alternates: { canonical: "/library" },
 };
 
