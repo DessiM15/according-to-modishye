@@ -9,7 +9,7 @@ This Privacy Policy outlines the collection, utilization, disclosure, and safegu
 
 This Privacy Policy applies to the actions of MODISHYE but does not encompass the independent privacy practices of entities and other third parties not owned or controlled by us, including third-party websites, payment providers, and independent sellers offering products or services through our Service, where applicable. You are responsible for ensuring that you have obtained the necessary permissions and approvals for any Personal Information you share with us on behalf of another individual. Specifically, customers who provide us with another person's Personal Information must ensure that they possess the requisite rights or have obtained the necessary consent under applicable law.
 
-**Data Controller:** MODISHYE [insert full legal name of the contracting entity].
+**Data Controller:** MODISHYE (Yeyeside Talabi).
 
 **Contact Information:** support@accordingtomodishyeblog.com.
 
@@ -308,7 +308,7 @@ MODISHYE will provide accurate information about whether it sells or shares Pers
 
 If MODISHYE engages in activities that constitute a sale or sharing of Personal Information, or processes Personal Information for targeted advertising, it will provide any notices and opt-out mechanisms required by applicable law.
 
-This provision does not represent that MODISHYE currently sells Personal Information or engages in targeted advertising. The actual practices must be confirmed and accurately reflected in this Privacy Policy.
+This provision does not represent that MODISHYE currently sells Personal Information or engages in targeted advertising.
 
 ## 7. RETENTION OF DATA
 
@@ -513,7 +513,7 @@ f) Backup and recovery arrangements where appropriate.
 
 13.5 MODISHYE will not knowingly sell or share the Personal Information of children in violation of applicable law.
 
-13.6 This section does not make a representation that MODISHYE currently sells or shares Personal Information. MODISHYE's actual practices must be verified before publication.
+13.6 This section does not make a representation that MODISHYE currently sells or shares Personal Information.
 
 ## 14. UNITED STATES STATE PRIVACY RIGHTS
 
@@ -627,7 +627,7 @@ Website: https://www.accordingtomodishyeblog.com
 Privacy and Customer Support: support@accordingtomodishyeblog.com
 Website Contact Form: Available through the [Contact](/contact) section of the Website.
 Data Controller / Legal Entity: Yeyeside Talabi
-Business Address: 79639 Hillcroft St PMB 2026 Houston, TX 77096
+Business Address: 9639 Hillcroft St PMB 2026 Houston, TX 77096
 
 MODISHYE will make reasonable efforts to respond to inquiries and privacy requests within the timeframes required by applicable law.
 
