@@ -1,0 +1,636 @@
+**Last Updated: November 26, 2026**
+**Effective Date: November 26, 2026**
+
+Thank you for choosing MODISHYE ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, store, and protect your Personal Information when you interact with our website, make purchases, subscribe to communications, or use our services.
+
+Your satisfaction and trust in us are paramount, and we appreciate your interest in our community. This policy prioritizes transparency by explaining how we handle your Personal Information as you navigate our website, purchase products, or utilize our various features.
+
+This Privacy Policy outlines the collection, utilization, disclosure, and safeguarding of your information when you engage with MODISHYE. By utilizing our services, you acknowledge that you have been provided with this Privacy Policy. Where consent is the required legal basis for a particular processing activity, we will obtain your consent separately and in accordance with applicable law.
+
+This Privacy Policy applies to the actions of MODISHYE but does not encompass the independent privacy practices of entities and other third parties not owned or controlled by us, including third-party websites, payment providers, and independent sellers offering products or services through our Service, where applicable. You are responsible for ensuring that you have obtained the necessary permissions and approvals for any Personal Information you share with us on behalf of another individual. Specifically, customers who provide us with another person's Personal Information must ensure that they possess the requisite rights or have obtained the necessary consent under applicable law.
+
+**Data Controller:** MODISHYE [insert full legal name of the contracting entity].
+
+**Contact Information:** support@accordingtomodishyeblog.com.
+
+For purposes of this Privacy Policy, references to "MODISHYE," "we," "our," or "us" mean the legal entity responsible for the relevant processing activity.
+
+## 1. INTERPRETATION AND LEGAL REFERENCES
+
+### 1.1 Personal Information (or Information)
+
+Any data that directly, indirectly, or in conjunction with other data, including a personal identification number, enables the identification or identifiability of an individual.
+
+Personal Information may include a person's name, email address, telephone number, postal address, account information, purchase history, device identifiers, IP address, and other information that identifies or can reasonably be linked to an individual.
+
+### 1.2 Utilization Information
+
+Data gathered automatically through this Website or through third-party services employed on this Website, which may include:
+
+(i) The IP addresses or domain names of the computers used by Users accessing this Website;
+(ii) URI addresses (Uniform Resource Identifier);
+(iii) The time of the request, the method used to submit the request to the server, and the size of the file received in response;
+(iv) Numerical codes indicating the status of the server's response, including successful outcomes and errors;
+(v) The country of origin and characteristics of the browser and operating system used by the User;
+(vi) Various time details per visit, including the duration spent on each page within the Website; and
+(vii) Details about the path followed within the Website, particularly the sequence of pages visited, together with other parameters concerning the device operating system and/or the User's IT environment.
+
+This information may be collected through cookies, analytics tools, server logs, and similar technologies, where enabled.
+
+### 1.3 User
+
+a) The individual utilizing this Website who, unless otherwise indicated, corresponds to the Data Subject.
+(i) Data Subject: The natural person to whom the Personal Information pertains.
+(ii) Data Processor: A natural or legal entity, public authority, agency, or other body that processes Personal Information on behalf of a Data Controller.
+(iii) Data Controller (or Owner): The natural or legal entity, public authority, agency, or other body that, individually or jointly with others, determines the purposes and means of processing Personal Information, including the security measures related to the operation and use of this Website. Unless otherwise specified, the Data Controller is the Owner of this Website.
+(iv) This Website: The platform through which the Personal Information of the User is collected and processed.
+(v) Service: The offerings provided by this Website, as detailed in the corresponding Terms of Service and on this Website.
+
+### 1.4 Applicable Privacy Laws
+
+Depending on the nature of MODISHYE's activities, the location of Users, and the applicable statutory thresholds, the processing of Personal Information may be subject to privacy and data protection laws, including:
+
+a) The Texas Data Privacy and Security Act (TDPSA);
+b) The California Consumer Privacy Act, as amended by the California Privacy Rights Act (CCPA/CPRA), where applicable;
+c) The General Data Protection Regulation (GDPR);
+d) The UK General Data Protection Regulation and Data Protection Act 2018;
+e) The Children's Online Privacy Protection Act (COPPA), where applicable; and
+f) Other applicable federal, state, national, and international privacy laws.
+
+The inclusion of these laws does not mean that every law applies to every User or transaction. Applicability depends on the relevant legal requirements and the circumstances of the processing.
+
+## 2. INFORMATION COLLECTION
+
+### 2.1 Personal Data
+
+During your interaction with our platform and while making purchases, we may collect personal information including, but not limited to, your name, contact details, billing and shipping addresses, account information, and transaction details.
+
+This information enables us to process orders, provide customer support, manage accounts, communicate with Users, and deliver a seamless experience.
+
+The specific information collected will depend on the features you use and the information necessary to provide the requested Service.
+
+### 2.2 Device Details
+
+a) To optimize your browsing experience, we may automatically gather information concerning your device, such as your IP address, browser type, operating system, device identifiers, and browsing data.
+
+Understanding device specifications helps us maintain compatibility, improve navigation, analyze Website performance, and enhance the User experience.
+
+### 2.3 Usage Statistics
+
+In our commitment to enhancing the User experience, we may collect usage statistics encompassing your interactions with our platform. This may include pages visited, time spent on each page, products viewed, links clicked, and other browsing activity.
+
+Analyzing usage patterns enables us to evaluate Website performance, improve our Services, and understand how Users interact with our content.
+
+Where analytics or similar technologies require consent under applicable law, we will obtain such consent before using them.
+
+### 2.4 Technical Specifications
+
+a) Depending on the features used and information necessary for the relevant Service, we may collect technical information such as:
+(i) Login credentials or account authentication information;
+(ii) Time zone settings;
+(iii) Browser specifications;
+(iv) IP address;
+(v) Approximate geographical location derived from technical information;
+(vi) Operating system details; and
+(vii) Identity documentation, only where necessary for a specific lawful purpose, such as identity verification, fraud prevention, or compliance with a legal obligation.
+
+MODISHYE will not request or collect identity documentation merely because a User accesses ordinary Website content. Any collection of sensitive or highly personal information will be limited to what is reasonably necessary and handled in accordance with applicable law.
+
+### 2.5 Payment Details
+
+a) Information pertaining to payment methods may include transaction references, payment status, billing information, and limited payment-related details.
+
+Where credit card or other payment information is processed through third-party payment providers, the relevant provider may collect and process payment credentials directly.
+
+b) Payment Processing
+
+When you choose to utilize Apple Pay or Google Pay for transactions on our Website, your payment details are processed through their respective payment services and according to their applicable terms of service and privacy policies.
+
+By opting to use Apple Pay or Google Pay, you acknowledge that these providers may process your payment information in accordance with their respective policies.
+
+Where payment credentials are processed directly by Apple Pay, Google Pay, or another payment provider, MODISHYE does not ordinarily receive or store the full payment credentials. We may receive transaction information necessary to confirm and administer the purchase.
+
+Please review Apple’s and Google's policies to understand their practices regarding the collection, use, and protection of your payment information.
+
+### 2.6 Marketing Insights
+
+a) Occasionally, we may conduct surveys, contests, or events, using your account details to identify you. Additionally, we may collect information voluntarily provided by you, such as your name, email address, phone number, organization name and address, and general details about your employer, if applicable.
+
+Furthermore, where relevant to a particular business service or activity, we might engage third-party service providers to collect business-related data about an employer, such as its name, size, and revenue, for potential service offerings or analytical purposes.
+
+Such information will only be collected where relevant to the activity being conducted and in accordance with applicable privacy requirements.
+
+### 2.7 MODISHYE Collaborators and Partners
+
+a) MODISHYE may collect business contact information of individuals associated with its collaborators and other partners to maintain communication regarding their business affiliations with MODISHYE.
+
+Such information may include names, business email addresses, professional contact details, and business-related correspondence.
+
+### 2.8 Subscribing to Our E-mail List
+
+a) When you subscribe to our email list, we use your email address to send you updates, news, announcements, and commercial messages, subject to applicable consent and electronic marketing requirements.
+
+b) You may unsubscribe from promotional emails at any time by using the unsubscribe link included in the communication or by contacting us at support@accordingtomodishyeblog.com.
+
+c) Unsubscribing from promotional communications will not prevent us from sending essential transactional or service-related communications where necessary.
+
+### 2.9 Data Collection for Managing Litigation and Legal Compliance
+
+We may collect and process Personal Information to comply with applicable legal requirements, respond to lawful requests, manage litigation, establish or defend legal claims, and demonstrate compliance with our legal obligations.
+
+Such processing will be limited to information reasonably necessary for the relevant legal or regulatory purpose.
+
+## 3. COLLECTION OF DATA
+
+### 3.1 Methods of Data Collection
+
+a) MODISHYE gathers and processes information based on your utilization of our Services. This information may be acquired through various channels, including online forms, account registration, purchases, email and chat exchanges, contact forms, surveys, and other communications with our team.
+
+Additionally, certain details may be collected automatically through tools such as cookies, analytics technologies, server logs, and similar technologies.
+
+### 3.2 Sources of Information
+
+a) MODISHYE collects Personal Information directly from you and/or your devices, including, but not limited to:
+
+(i) Service Data: When you use our Website, you may provide Personal Information, which may include account credentials, contact information, preferences, and other relevant data. This information is collected to facilitate your use of the Website and provide a more personalized experience.
+
+(ii) Transaction Reporting: Financial information necessary for processing transactions may be provided by you or collected through payment service providers. Documents such as photo identification or bank details will only be requested where necessary for a specific lawful purpose and where such collection is actually required.
+
+(iii) Surveys: Participation in surveys conducted by us or our partner companies, including feedback within the Service, questionnaires, telephone interviews, or discussion groups, may require providing Personal Information.
+
+(iv) Analytics Data and Tools: We may collect analytics data directly or through third-party tools to analyze trends, understand Website usage, and improve our Services.
+
+(v) Cookies and Tracking Technologies: Information may be collected over time using cookies, pixels, tags, and similar tracking technologies, subject to applicable consent requirements and our Cookie Policy.
+
+(vi) Other Users of Our Service: If you are a customer or collaborator who uses MODISHYE, we may collect your Personal Information in connection with that relationship.
+
+(vii) Our Affiliates: Personal Information may be collected from our affiliates, where applicable and where legally permitted.
+
+(viii) Governmental Entities: Publicly available information or information from governmental sources may be collected where necessary for a lawful business or compliance purpose.
+
+(ix) Business Partners: Business-related information may be collected from third-party sources such as payment processors, verification vendors, and accounting service providers, where relevant to the Services.
+
+(x) Social Media Usage: If you choose to log in using your social media profiles, pages, or groups, we may receive information made available by the relevant social media provider, subject to your settings and that provider's privacy policy.
+
+(xi) Public Sources: Information from publicly available sources, such as your public website or professional profile, may also be collected where relevant to our business activities and permitted by law.
+
+(xii) Third-Party Activities: This Privacy Policy pertains to MODISHYE's activities and does not extend to independent privacy practices of third parties, including customers and other companies offering products or services through our platform. It is your responsibility to ensure that necessary authorizations and consents are obtained for any Personal Information you provide to us on behalf of another individual.
+
+b) MODISHYE will seek to collect only information that is adequate, relevant, and reasonably necessary for the purposes explained in this Privacy Policy.
+
+c) We will not knowingly collect additional categories of Personal Information or use collected information for materially different purposes without providing any notice or obtaining consent required by applicable law.
+
+## 4. OBJECTIVES OF DATA COLLECTION
+
+### 4.1 Marketing Communications
+
+a) MODISHYE may utilize your contact details to inform you about our latest products, Services, promotions, announcements, and relevant updates. This enables us to provide information about offerings that may be relevant to your interests.
+
+b) Where required by applicable law, marketing communications will only be sent with the necessary consent or other valid legal basis.
+
+c) Users may withdraw consent or unsubscribe from marketing communications at any time.
+
+### 4.2 Integration and Collaboration Platform
+
+a) Our integration and collaboration platform, where available, may serve as a centralized hub to enhance your Website experience. This feature may facilitate the integration of various functionalities and promote collaboration, fostering a more connected and efficient User experience.
+
+b) Information processed through such features will be used only for the purposes for which the relevant feature is provided and in accordance with applicable privacy requirements.
+
+### 4.3 Enhancing MODISHYE
+
+a) Continuous enhancement is paramount to us. We may utilize feedback and analyze User interactions to improve our Website, Services, content, and overall User experience.
+
+This may include evaluating Website performance, understanding which content is useful to Users, identifying technical issues, and developing new features.
+
+### 4.4 Customer Assistance
+
+a) Our customer support team assists with queries, concerns, and issues encountered while using our platform. We may process contact details, account information, purchase information, and correspondence to respond to requests and provide support.
+
+### 4.5 Safeguarding Data Integrity
+
+a) Upholding data integrity is a core value for us. We implement reasonable administrative, technical, and organizational security measures to safeguard Personal Information and transactions against unauthorized access, disclosure, alteration, loss, or destruction.
+
+These measures may include encryption, secure access controls, authentication measures, and other safeguards appropriate to the nature and volume of information processed.
+
+### 4.6 Preventing Fraudulent Activities
+
+a) We prioritize data and transaction security by implementing reasonable fraud prevention measures. This may involve monitoring suspicious transactions, identifying unauthorized account activity, employing authentication measures, and maintaining records necessary to identify and prevent fraudulent activities.
+
+Such processing will be undertaken for legitimate security and fraud-prevention purposes and in accordance with applicable law.
+
+### 4.7 Compliance with Legal Requirements
+
+a) Our processing of Personal Information may be based on one or more lawful grounds, depending on the applicable law and the specific processing activity. These may include:
+(i) Your consent;
+(ii) The performance of a contract or steps taken at your request before entering into a contract;
+(iii) Compliance with a legal obligation;
+(iv) Protection of vital interests;
+(v) Performance of a task carried out in the public interest, where applicable; and
+(vi) The pursuit of legitimate interests, provided such interests are not overridden by your rights and freedoms.
+
+Where processing relies on consent, you may withdraw that consent at any time. Withdrawal will not affect the lawfulness of processing carried out before withdrawal.
+
+### 4.8 Data Processing and Transfer
+
+a) MODISHYE may process Personal Information in the United States and other countries where its service providers or business operations are located.
+
+Where Personal Information is transferred internationally, MODISHYE will take steps required by applicable law to ensure that the transfer is lawful and that appropriate safeguards are in place.
+
+### 4.9 Third-Party Partnerships
+
+a) We may disclose your Personal Information to third parties with whom we have partnered to offer a product or Service, or to providers who assist us in operating the Website and delivering our Services.
+
+b) Where a third party processes Personal Information on our behalf, we will seek to ensure that appropriate contractual and security arrangements are in place, as required by applicable law.
+
+c) Where a third party acts as an independent Data Controller, its own privacy policy and practices may apply to its processing activities.
+
+### 4.10 Business Transfers
+
+a) In the event of a merger, acquisition, restructuring, sale, or transfer of our business or assets, we may disclose or transfer Personal Information as part of the relevant transaction, subject to applicable privacy laws.
+
+b) Where required by law, we will provide notice of such transfer and any applicable rights or choices available to affected individuals.
+
+### 4.11 Other Scenarios
+
+a) We may seek your consent to disclose your information to other third parties for purposes not otherwise described in this Privacy Policy, where consent is required.
+
+b) We may also disclose Personal Information where required or permitted by applicable law, including to protect the rights, safety, property, or security of MODISHYE, its Users, or other individuals.
+
+## 5. DATA PROCESSING METHODS
+
+5.1 MODISHYE employs reasonable administrative, technical, and organizational security measures to safeguard against unauthorized access, disclosure, alteration, loss, or destruction of Personal Information.
+
+5.2 Data processing occurs using computer systems and/or IT tools, adhering to organizational protocols and methods directly linked to the specified purposes.
+
+Alongside MODISHYE, certain individuals responsible for various functions within the Website's operation, including administration, customer support, marketing, legal matters, and system administration, may have access to Personal Information where necessary to perform their duties.
+
+External entities such as third-party technical service providers, hosting providers, IT firms, email service providers, payment processors, analytics providers, and communication agencies may also have access to information where they provide services to MODISHYE.
+
+Where such entities process Personal Information on MODISHYE's behalf, they may be designated as Data Processors and will be subject to appropriate contractual requirements where required by applicable law.
+
+Upon request, further information about relevant categories of service providers may be obtained from MODISHYE, subject to confidentiality, security, and legal restrictions.
+
+5.3 MODISHYE prioritizes the security and confidentiality of your data, ensuring that it is handled with reasonable care and in accordance with relevant regulations.
+
+Although we take reasonable measures to protect Personal Information, no method of electronic transmission, storage, or security system is completely secure. Therefore, we cannot guarantee absolute security.
+
+In the event of a Personal Information breach, MODISHYE will take appropriate steps to investigate, contain, and address the incident and provide notifications to affected individuals or authorities where required by applicable law.
+
+## 6. TRANSFERS AND SHARING OF DATA
+
+6.1 Depending on the User's location, data transfers may entail moving the User's Data to a country different from their own. Should such a transfer occur, Users may acquire further details by referring to the relevant sections of this document or contacting MODISHYE through the contact information provided.
+
+6.2 MODISHYE may store, process, and/or transfer Personal Information to countries beyond the European Economic Area (EEA), including countries where the European Commission has not issued an adequacy decision.
+
+Where applicable data protection laws require additional safeguards for international transfers, MODISHYE will rely on an appropriate transfer mechanism, which may include an adequacy decision, Standard Contractual Clauses, the UK International Data Transfer Agreement or Addendum, or another lawful mechanism.
+
+Consent will be obtained for an international transfer only where consent is the appropriate legal mechanism under the applicable law. International transfers will not automatically be treated as requiring consent in every circumstance.
+
+### 6.3 Categories of Recipients
+
+We may share your Personal Information with the following recipients, where necessary for the purposes described in this Privacy Policy:
+
+a) Internal Recipients: Your Personal Information may be disclosed to authorized personnel who require access to fulfill their duties, such as customer support teams, administrators, and technical personnel.
+
+b) Processors: In order to deliver the Services, MODISHYE may relay your Personal Information to other entities acting as Data Processors, including hosting providers, payment service providers, analytics providers, email service providers, and technical support providers.
+
+c) Partners and Third Parties: To deliver certain Services, MODISHYE may disclose your Personal Information to third-party service providers or partners. These parties may act as independent Data Controllers and maintain their own Privacy Policies, which Users should review when utilizing their services.
+
+d) Judicial, Administrative, and Other Public Authorities: MODISHYE may be obligated to share or disclose Personal Information if required by law, a request from a competent authority, a court order, or to pursue legal remedies, defend MODISHYE's rights, or assist with investigations involving fraud, identity theft, or other unlawful activities.
+
+e) Business Transaction Recipients: Personal Information may be disclosed to prospective or actual purchasers, investors, advisers, or other parties involved in a merger, acquisition, restructuring, or sale of business assets, subject to applicable law.
+
+f) Other Recipients: We may disclose information to other recipients where you have provided the necessary consent or where disclosure is otherwise permitted by applicable law.
+
+### 6.4 Sale, Sharing, and Targeted Advertising
+
+MODISHYE will provide accurate information about whether it sells or shares Personal Information, as those terms are defined by applicable privacy laws.
+
+If MODISHYE engages in activities that constitute a sale or sharing of Personal Information, or processes Personal Information for targeted advertising, it will provide any notices and opt-out mechanisms required by applicable law.
+
+This provision does not represent that MODISHYE currently sells Personal Information or engages in targeted advertising. The actual practices must be confirmed and accurately reflected in this Privacy Policy.
+
+## 7. RETENTION OF DATA
+
+7.1 MODISHYE will process and store Personal Information for as long as reasonably necessary for the purposes for which it was collected, including contractual, operational, legal, security, and regulatory purposes.
+
+Therefore:
+
+a) Personal Information collected for contractual purposes between MODISHYE and the User will generally be retained for the duration of the contractual relationship and for any additional period reasonably necessary to administer the transaction or comply with legal obligations.
+
+b) Personal Information collected based on User consent will be retained for as long as the relevant consent remains valid or until it is withdrawn, unless another lawful basis permits continued retention.
+
+c) Personal Information collected for MODISHYE's legitimate interests will be retained for the period reasonably necessary to fulfill those interests, taking into account the nature of the information, the purpose of processing, and the rights of the User.
+
+The following table provides examples of purposes and corresponding legal bases:
+
+- **Purpose:** Offering communication between MODISHYE and the visitor\n**Legal Basis:** Legitimate interests in providing an efficient way to communicate with our teams
+- **Purpose:** Responding to a User's request for information or assistance\n**Legal Basis:** Legitimate interests and, where applicable, steps taken at the User's request or performance of a contract
+- **Purpose:** Managing requests relating to data protection rights\n**Legal Basis:** Compliance with legal obligations
+- **Purpose:** Enhancing and improving the Services and Website\n**Legal Basis:** Legitimate interests, or consent where required for particular analytics or tracking technologies
+- **Purpose:** Processing and delivering purchases\n**Legal Basis:** Performance of a contract and compliance with legal obligations
+- **Purpose:** Sending promotional communications\n**Legal Basis:** Consent or another lawful basis where permitted by applicable law
+- **Purpose:** Preventing fraud and protecting Website security\n**Legal Basis:** Legitimate interests and, where applicable, compliance with legal obligations
+
+MODISHYE may continue to retain Personal Information for an extended period where required to fulfill legal obligations, comply with authority orders, establish or defend legal claims, or maintain necessary business records.
+
+7.2 Upon expiration of the applicable retention period, Personal Information will be deleted, anonymized, or securely disposed of, unless further retention is required or permitted by law.
+
+The expiration of a retention period does not eliminate any rights that an individual may have under applicable law. Where information is no longer held or is no longer identifiable, certain requests may no longer be capable of fulfillment.
+
+7.3 Following the termination or deactivation of your User profile on MODISHYE, we may retain Personal Information for purposes outlined in this Privacy Policy, including legal compliance, backup and recovery, archival, protection of MODISHYE's rights and those of its customers and third parties, audit purposes, security, and other purposes permitted by law.
+
+Where Personal Information is no longer required, it will be deleted or anonymized in accordance with our retention practices.
+
+### 7.4 Retention Periods and Criteria
+
+Where a specific retention period is not stated, MODISHYE will determine the appropriate retention period by considering:
+
+a) The purpose for which the information was collected;
+b) The nature and sensitivity of the information;
+c) The length of the User relationship;
+d) Applicable statutory and regulatory retention requirements;
+e) The need to resolve disputes or enforce agreements; and
+f) Security, fraud prevention, and legitimate business requirements.
+
+## 8. RIGHTS UNDER DATA PROTECTION REGULATIONS
+
+8.1 In compliance with relevant data protection regulations, including the General Data Protection Regulation (GDPR), UK General Data Protection Regulation, Data Protection Act 2018, and applicable United States privacy laws, individuals interacting with our Website may be afforded specific rights to safeguard their Personal Information.
+
+The availability and scope of these rights depend on the individual's location, the applicable law, the nature of the information, and any statutory exceptions.
+
+a) Right to Access: Individuals may request confirmation of whether MODISHYE processes their Personal Information and, where applicable, obtain access to such information.
+
+b) Right to Rectification: Individuals may request correction of inaccurate Personal Information or completion of incomplete information.
+
+c) Right to Erasure (Right to be Forgotten): Individuals may request deletion of their Personal Information under certain circumstances, such as where the information is no longer necessary or consent has been withdrawn and no other lawful basis applies.
+
+d) Right to Restriction of Processing: Individuals may request restriction of processing in circumstances recognized by applicable law.
+
+e) Right to Data Portability: Where applicable, individuals may obtain certain Personal Information in a structured, commonly used, and machine-readable format and request its transfer to another Data Controller.
+
+f) Right to Object: Individuals may object to certain processing activities, particularly where processing is based on legitimate interests or involves direct marketing, subject to applicable legal requirements.
+
+g) Rights Related to Automated Decision-Making: Where applicable, individuals may have the right not to be subject to decisions based solely on automated processing, including profiling, that produce legal or similarly significant effects.
+
+h) Right to Withdraw Consent: Where processing is based on consent, individuals may withdraw that consent at any time. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.
+
+i) Right to Opt Out: Depending on applicable law, individuals may have the right to opt out of the sale of Personal Information, sharing for cross-context behavioral advertising, targeted advertising, or certain profiling activities.
+
+j) Right to Non-Discrimination: MODISHYE will not unlawfully discriminate against individuals for exercising privacy rights available to them under applicable law.
+
+k) Data Security: Reasonable physical, technical, and organizational security measures will be used to protect Personal Information in accordance with applicable legal requirements.
+
+### 8.2 How to Exercise Your Rights
+
+Users may submit a privacy request by contacting:
+
+Email: support@accordingtomodishyeblog.com
+
+The request should describe the right being exercised and provide sufficient information for MODISHYE to identify and verify the relevant individual.
+
+MODISHYE may request additional information reasonably necessary to verify the identity and authority of the requester. We will not request more information than is reasonably necessary for verification.
+
+### 8.3 Response to Requests
+
+MODISHYE will respond to verified privacy requests within the time limits imposed by applicable law.
+
+Where permitted, the response period may be extended if a request is complex or additional time is reasonably necessary. If an extension is required, MODISHYE will provide notice and explain the reason where required by law.
+
+### 8.4 Appeals and Complaints
+
+Where applicable privacy law provides an appeal process, Users may appeal a decision concerning their privacy request by replying to the response received or contacting support@accordingtomodishyeblog.com with the subject line "Privacy Rights Appeal."
+
+Users may also have the right to submit a complaint to the relevant data protection authority or regulatory body.
+
+### 8.5 No Unlawful Discrimination
+
+MODISHYE will not unlawfully deny goods or services, charge different prices, or provide a different level or quality of service because an individual has exercised a privacy right protected by applicable law.
+
+## 9. ADDITIONAL INFORMATION REGARDING DATA HANDLING
+
+### 9.1 Legal Proceedings
+
+a) MODISHYE may utilize a User's Personal Information for legal purposes, including court proceedings or pre-litigation procedures resulting from the misuse of this Website or its associated Services.
+
+Such processing may also be necessary to establish, exercise, or defend legal claims and protect MODISHYE's legal rights.
+
+### 9.2 System Logs and Maintenance
+
+a) For the upkeep and smooth operation of this Website, as well as any third-party services integrated with it, system logs may be collected.
+
+These logs record interactions with the Website and may utilize other Personal Information, such as IP addresses, for maintenance, troubleshooting, security, and fraud prevention purposes.
+
+### 9.3 Additional Information
+
+a) For further details regarding the collection or processing of Personal Information, individuals may contact support@accordingtomodishyeblog.com.
+
+### 9.4 Third-Party Websites
+
+a) Our Website may feature links or references to third-party websites. Please note that these sites are beyond our control, and their privacy policies may differ from ours. This Privacy Policy does not extend to independent third-party websites.
+
+9.5 We advise Users to review such websites' terms of use and privacy policies before disclosing any Personal Information. The privacy practices of those third-party websites govern the use of information collected directly by them.
+
+### 9.6 Children's Privacy
+
+a) Our Website caters to a general audience and is not intended to be directed at children under the age of thirteen (13).
+
+b) MODISHYE does not knowingly collect Personal Information from children under thirteen (13) in circumstances where verifiable parental consent is required under the Children's Online Privacy Protection Act (COPPA) or other applicable law.
+
+c) If you are a parent or guardian and believe that we have collected Personal Information from your child in a manner contrary to legal requirements, please contact us using the details provided above. We will investigate and take appropriate steps to delete or otherwise address such information in compliance with applicable law.
+
+d) Where Users between thirteen (13) and sixteen (16), or other minors, access the Website, any applicable parental consent, age-related restrictions, and child privacy protections will be respected.
+
+e) MODISHYE does not knowingly condition a child's participation in an activity on the disclosure of more Personal Information than is reasonably necessary for that activity.
+
+## 10. UPDATE TO THE PRIVACY POLICY
+
+10.1 MODISHYE is dedicated to maintaining transparency and protecting your privacy. As part of this commitment, we reserve the right to update and modify this Privacy Policy as needed to reflect changes in our business practices, technology, legal obligations, and privacy requirements.
+
+a) Notification of Changes: MODISHYE may update this Privacy Policy from time to time. Users will be notified of changes through this webpage within the Website. It is advisable for Users to regularly review this page, taking note of the date of the last modification provided at the top of this Privacy Policy.
+
+If changes materially affect processing activities based on User consent, MODISHYE will seek new consent where necessary under applicable law.
+
+b) Ongoing Evaluation and Improvement: We are committed to continually evaluating and enhancing our Privacy Policy to better protect your information. Revisions will be made accessible on this webpage so that Users are informed of changes to our practices.
+
+Significant changes will be indicated by updating the "Last Updated" date at the top of this Privacy Policy. Where required by law, MODISHYE will provide additional notice or obtain consent before implementing material changes.
+
+Continued use of the Service after a revised Privacy Policy has been published does not, by itself, constitute consent where applicable law requires a separate affirmative consent.
+
+## ADDITIONAL PRIVACY PROTECTIONS
+
+The following additional sections supplement the original Sections 1–10 and provide further detail concerning the collection, use, and protection of Personal Information.
+
+## 11. COOKIES AND TRACKING TECHNOLOGIES
+
+11.1 MODISHYE may use cookies and similar technologies to improve Website functionality, understand Website traffic, remember User preferences, and support the operation of its Services.
+
+11.2 Cookies are small text files placed on a User's device when visiting a website. They may help the Website recognize a User's browser and retain certain information.
+
+11.3 Cookies may include:
+
+a) Strictly Necessary Cookies: Required for basic Website operation, security, and functionality.
+b) Functional Cookies: Used to remember preferences and improve the User experience.
+c) Analytics Cookies: Used to understand Website traffic, page performance, and User interactions.
+d) Advertising or Marketing Cookies: Where used, these may support advertising, campaign measurement, or targeted advertising.
+
+11.4 Where applicable law requires consent, non-essential cookies and tracking technologies will not be activated before the required consent is obtained.
+
+11.5 Users may manage cookie preferences through the Website's cookie settings, where available, or through their browser settings. Disabling certain cookies may affect Website functionality.
+
+11.6 Additional information concerning cookies, their purposes, and management options is provided in our separate Cookie Policy.
+
+## 12. DATA SECURITY AND BREACH RESPONSE
+
+12.1 MODISHYE takes reasonable steps to protect Personal Information against unauthorized access, misuse, loss, disclosure, alteration, or destruction.
+
+12.2 Security measures may include:
+
+a) Access controls and authentication procedures;
+b) Encryption or secure transmission methods where appropriate;
+c) Technical safeguards and system monitoring;
+d) Restricted access to Personal Information based on business needs;
+e) Security procedures for third-party service providers; and
+f) Backup and recovery arrangements where appropriate.
+
+12.3 No electronic system or internet transmission method can be guaranteed to be completely secure. MODISHYE therefore cannot guarantee absolute security of Personal Information.
+
+12.4 If MODISHYE becomes aware of a Personal Information breach, it will take reasonable steps to investigate, contain, and mitigate the incident.
+
+12.5 MODISHYE will notify affected individuals and relevant regulatory authorities where notification is required by applicable law, within the applicable statutory timeframe.
+
+12.6 Users should promptly notify MODISHYE if they suspect unauthorized access to their account or believe their Personal Information has been compromised through the Website.
+
+## 13. SALE, SHARING, AND DISCLOSURE OF PERSONAL INFORMATION
+
+13.1 MODISHYE may disclose Personal Information to third parties in the circumstances described in this Privacy Policy, including to service providers, payment processors, hosting providers, analytics providers, and business partners.
+
+13.2 Certain privacy laws define "sale," "sharing," and targeted advertising broadly. Depending on the law, certain disclosures may be treated as a sale or sharing even where no direct monetary payment is made.
+
+13.3 MODISHYE will accurately disclose whether it sells or shares Personal Information or processes it for targeted advertising, where required by applicable law.
+
+13.4 If MODISHYE engages in activities that give individuals a statutory right to opt out, it will provide an appropriate method for exercising that right.
+
+13.5 MODISHYE will not knowingly sell or share the Personal Information of children in violation of applicable law.
+
+13.6 This section does not make a representation that MODISHYE currently sells or shares Personal Information. MODISHYE's actual practices must be verified before publication.
+
+## 14. UNITED STATES STATE PRIVACY RIGHTS
+
+14.1 Depending on the applicable statutory requirements, residents of certain United States states may have additional privacy rights concerning their Personal Information.
+
+14.2 These rights may include:
+
+a) The right to confirm whether Personal Information is being processed;
+b) The right to access Personal Information;
+c) The right to correct inaccurate Personal Information;
+d) The right to request deletion of Personal Information;
+e) The right to obtain a portable copy of certain Personal Information;
+f) The right to opt out of the sale of Personal Information;
+g) The right to opt out of targeted advertising or certain profiling activities; and
+h) The right not to be discriminated against for exercising privacy rights.
+
+14.3 Where applicable, these rights may arise under the Texas Data Privacy and Security Act, California Consumer Privacy Act as amended by the California Privacy Rights Act, and other state privacy legislation.
+
+14.4 The scope of available rights and any applicable exceptions depend on the law governing the individual and the processing activity.
+
+14.5 Requests may be submitted to support@accordingtomodishyeblog.com.
+
+14.6 MODISHYE will verify and respond to requests in accordance with applicable statutory deadlines and procedures.
+
+## 15. EUROPEAN ECONOMIC AREA AND UNITED KINGDOM PRIVACY RIGHTS
+
+15.1 Where the GDPR or UK GDPR applies to MODISHYE's processing of Personal Information, individuals may have additional rights under the relevant legislation.
+
+15.2 These rights may include:
+
+a) The right to be informed about the collection and use of Personal Information;
+b) The right to access Personal Information;
+c) The right to rectification;
+d) The right to erasure, where applicable;
+e) The right to restrict processing;
+f) The right to data portability, where applicable;
+g) The right to object to certain processing activities;
+h) Rights relating to automated decision-making and profiling; and
+i) The right to withdraw consent where processing is based on consent.
+
+15.3 Individuals may also have the right to lodge a complaint with the supervisory authority in the country where they reside, work, or where the alleged infringement occurred.
+
+15.4 Where applicable, individuals in the United Kingdom may contact the Information Commissioner's Office (ICO).
+
+15.5 The availability of these rights depends on the relevant legal requirements and applicable exceptions.
+
+## 16. AUTOMATED DECISION-MAKING AND PROFILING
+
+16.1 MODISHYE may use automated tools, analytics systems, or similar technologies to understand Website usage, identify technical issues, improve Services, and support business operations.
+
+16.2 MODISHYE will provide information concerning automated decision-making or profiling where required by applicable law.
+
+16.3 Where MODISHYE makes decisions based solely on automated processing that produce legal or similarly significant effects on individuals, it will comply with applicable legal requirements, including any required safeguards, notices, and rights to human intervention or review.
+
+16.4 MODISHYE does not intend to use ordinary Website analytics to make legally significant decisions about Users.
+
+16.5 If these practices change, this Privacy Policy will be updated as necessary.
+
+## 17. THIRD-PARTY SERVICE PROVIDERS
+
+17.1 MODISHYE may rely on independent third-party providers to operate and maintain the Website and provide certain Services.
+
+17.2 These providers may include:
+
+a) Website hosting and infrastructure providers;
+b) Payment processing services;
+c) Email and newsletter distribution services;
+d) Analytics and performance measurement providers;
+e) Website security and fraud prevention providers;
+f) Customer support and communication providers; and
+g) Social media and integration services.
+
+17.3 These providers may process Personal Information on MODISHYE's behalf or act as independent Controllers, depending on the services they provide.
+
+17.4 Where a provider processes Personal Information on MODISHYE's behalf, MODISHYE will seek to ensure that appropriate contractual and security arrangements are in place.
+
+17.5 Users should review the privacy policies of independent third-party providers where they interact directly with those providers.
+
+## 18. DATA PROTECTION CONTACT AND REQUESTS
+
+18.1 Users may contact MODISHYE concerning this Privacy Policy, Personal Information processing, or privacy rights requests.
+
+18.2 Requests should be submitted to:
+
+Email: support@accordingtomodishyeblog.com
+
+18.3 Users should include sufficient details to enable MODISHYE to identify the relevant account or information and understand the nature of the request.
+
+18.4 MODISHYE may request reasonable identity verification where necessary to protect Personal Information from unauthorized disclosure.
+
+18.5 MODISHYE will not require Users to provide excessive information merely to exercise their privacy rights.
+
+18.6 Where a request is refused or cannot be fulfilled, MODISHYE will provide an explanation and information about any applicable appeal or complaint rights, where required by law.
+
+## 19. DO NOT TRACK AND GLOBAL PRIVACY CONTROL
+
+19.1 Certain browsers and devices may offer privacy signals or settings intended to communicate a User's preference concerning online tracking.
+
+19.2 The legal treatment of such signals may vary depending on the applicable jurisdiction.
+
+19.3 Where required by applicable law, MODISHYE will recognize and process legally recognized opt-out preference signals, including Global Privacy Control (GPC), in accordance with the applicable requirements.
+
+19.4 Users may also manage cookies and tracking preferences through available Website settings and browser controls.
+
+## 20. CONTACT INFORMATION AND LEGAL NOTICES
+
+For questions, requests, complaints, or concerns regarding this Privacy Policy or the processing of Personal Information, please contact:
+
+**MODISHYE**
+Website: https://www.accordingtomodishyeblog.com
+Privacy and Customer Support: support@accordingtomodishyeblog.com
+Website Contact Form: Available through the [Contact](/contact) section of the Website.
+Data Controller / Legal Entity: Yeyeside Talabi
+Business Address: 79639 Hillcroft St PMB 2026 Houston, TX 77096
+
+MODISHYE will make reasonable efforts to respond to inquiries and privacy requests within the timeframes required by applicable law.
+
+END OF PRIVACY POLICY
+
+© 2026 According to MODISHYE. All rights reserved.

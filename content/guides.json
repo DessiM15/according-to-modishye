@@ -81,8 +81,8 @@
     "currency": "USD",
     "image": "/images/guides/double-dawn.png",
     "imageAlt": "Double Dawn cover",
-    "description": "Achieve More with Double Dawn Double Dawn is the go-to solution for grad students balancing work and academics. Streamline your week by brainstorming,...",
-    "html": "<p><b>Achieve More with Double Dawn</b><br>\nDouble Dawn is the go-to solution for grad students balancing work and academics. Streamline your week by brainstorming, goal-setting, and reflecting on your wins. Purchase your digital track list today!</p>"
+    "description": "Achieve More with Double Dawn Double Dawn is the go-to solution for grad students juggling work and academics. Streamline your week by brainstorming,...",
+    "html": "<p><b>Achieve More with Double Dawn</b><br>\nDouble Dawn is the go-to solution for grad students juggling work and academics. Streamline your week by brainstorming, goal-setting, and reflecting on your wins. Purchase your digital track list today!</p>"
   },
   {
     "slug": "prof-recommended",
@@ -90,7 +90,7 @@
     "subtitle": "Connections first, recommendations next: your request checklist",
     "shelf": "getting-into-college",
     "colour": "coral",
-    "pages": "PDF checklist with email templates",
+    "pages": "PDF checklist",
     "audience": "Students asking for recommendation letters",
     "legacySlug": "prof-recommended-checklist",
     "wooId": 5081,

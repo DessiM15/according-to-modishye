@@ -258,7 +258,7 @@ a { text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
 .prose h2 { font-size: var(--text-xl); line-height: 1.2; margin-top: 2.2em; }
 .prose h3 { font-size: var(--text-lg); font-weight: 600; margin-top: 1.8em; }
 .prose p { color: var(--color-ink); }
-.prose a { color: var(--color-coral-deep); text-decoration: underline; text-decoration-thickness: 2px; }
+.prose a { color: var(--color-coral-deep); text-decoration: underline; text-decoration-thickness: 2px; overflow-wrap: anywhere; }
 .prose a:hover { color: var(--color-ink); }
 .prose strong, .prose b { font-weight: 650; }
 .prose ol, .prose ul { padding-left: 1.4em; }
